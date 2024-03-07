@@ -29,15 +29,12 @@
         <?php endif; ?>
 
         <div class="main_footer">
-            <div class="bottom_sec">
-                <p>کلیه حقوق مادی و معنوی متعلق به موسسه روانشناسی باتاب هزاره فردا می‌باشد.</p>
-                <div class="zemtrix">
-                    <a href="https://zemtrix.com/" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/zemtrix.png" alt="">
-                    </a>
-                </div>
-            </div>
+
         </div>
+
+    </div>
+    <div class="copyright">
+        <p>تمام حقوق مادی و معنوی این وب سایت متعلق به برند گالری می باشد.</p>
     </div>
 </footer>
 

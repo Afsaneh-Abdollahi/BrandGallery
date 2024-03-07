@@ -102,15 +102,23 @@ h5 {
 /*end header*/
 
 /*main*/
+main {
+    background-color:  #f6f6f6 !important
+}
 /*end main*/
 
 /*footer*/
 
 footer {
-    background-color: #F7F7F7;
+    background-color: #fefefe;
+    position: relative;
 }
 
-.service-section img {
+footer .service-section {
+    padding: 50px 0;
+    border-bottom: 1px solid #C8C8C8;
+}
+footer .service-section img {
     width: 60px;
     height: 60px;
     float: right;
@@ -118,13 +126,19 @@ footer {
     line-height: 60px;
 }
 
-.service-section h4 {
+footer .service-section h4 {
     font-size: 1rem;
     margin: 10px 0 0;
 }
 
-.service-section span {
+footer .service-section span {
     font-size: .8rem;
+}
+footer .copyright {
+    text-align: center;
+    background-color: #e0e0e0;
+    border-top: 1px solid #C8C8C8;
+    padding: 10px 0;
 }
 /*end footer*/
 
