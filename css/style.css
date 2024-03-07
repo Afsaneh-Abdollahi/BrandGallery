@@ -98,6 +98,36 @@ h5 {
     height: 100%;
 }
 
+/*header*/
+/*end header*/
+
+/*main*/
+/*end main*/
+
+/*footer*/
+
+footer {
+    background-color: #F7F7F7;
+}
+
+.service-section img {
+    width: 60px;
+    height: 60px;
+    float: right;
+    margin-left: 10px;
+    line-height: 60px;
+}
+
+.service-section h4 {
+    font-size: 1rem;
+    margin: 10px 0 0;
+}
+
+.service-section span {
+    font-size: .8rem;
+}
+/*end footer*/
+
 /*----Media Query----*/
 
 @media (max-width: 1200px) {
