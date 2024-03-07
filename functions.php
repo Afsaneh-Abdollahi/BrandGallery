@@ -46,8 +46,11 @@ add_action( 'after_setup_theme', 'wp_blank_setup' );
  */
 function wp_blank_load_scripts() {
 	wp_enqueue_script('jquery-min', PATH . '/js/jquery.min.js',array('jquery'), null, true );
-	wp_enqueue_script('slick-min', PATH . '/js/slick.min.js',array('jquery'), null, true );
-	wp_enqueue_script('main', PATH . '/js/main.js',array('jquery'), null, true );
+	wp_enqueue_script('swiper', PATH . '/js/swiper.min.js',array('jquery'), null, true );
+	wp_enqueue_script('matchHeight', PATH . '/js/jquery.matchHeight-min.js',array('jquery'), null, true );
+	wp_enqueue_script('bootstrap', PATH . '/js/bootstrap.min.js',array('jquery'), null, true );
+	wp_enqueue_script('main-js', PATH . '/js/main.js',array('jquery'), null, true );
+
 
 }
 add_action( 'wp_enqueue_scripts', 'wp_blank_load_scripts' );
@@ -58,10 +61,9 @@ add_action( 'wp_enqueue_scripts', 'wp_blank_load_scripts' );
  * @return void
  */
 function wp_blank_load_styles() {
-	wp_enqueue_style('bootstrap-grid', PATH . '/assets/styles/bootstrap-grid.min.css',false,'1.1','all');
-	wp_enqueue_style('slick', PATH . '/assets/styles/slick.css',false,'1.1','all');
-	wp_enqueue_style('slick-theme', PATH . '/assets/styles/slick-theme.css',false,'1.1','all');
-	wp_enqueue_style('main-style', PATH . '/assets/styles/style.css',false,'1.1','all');
+	wp_enqueue_style('bootstrap', PATH . '/css/bootstrap.min.css',false,'1.1','all');
+	wp_enqueue_style('swiper', PATH . '/css/swiper.min.css',false,'1.1','all');
+	wp_enqueue_style('main-style', PATH . '/css/style.css',false,'1.1','all');
 }
 add_action( 'wp_enqueue_scripts', 'wp_blank_load_styles' );
 
@@ -85,4 +87,13 @@ function wp_blank_widgets_init() {
 }
 add_action( 'widgets_init', 'wp_blank_widgets_init' );
 
-?>
+//upload webp
+function webp_upload_mimes( $existing_mimes ) {
+	// add webp to the list of mime types
+	$existing_mimes['webp'] = 'image/webp';
+
+	// return the array back to the function with our added mime type
+	return $existing_mimes;
+}
+add_filter( 'mime_types', 'webp_upload_mimes' );
+///

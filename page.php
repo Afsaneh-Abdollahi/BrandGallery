@@ -6,7 +6,4 @@
  */
 get_header(); ?>
 
-
-aaaaaaaaaaaa
-
 <?php get_footer(); ?>
