@@ -29,7 +29,76 @@
         <?php endif; ?>
 
         <div class="main_footer">
-
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-1 d-flex">
+                    <div class="menu">
+                        <?php
+                        if (has_nav_menu('footer-menu1')) { ?>
+                            <h4><?php echo get_field('footer_menu_title') ?></h4>
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-menu1',
+                                    'menu' => '',
+                                    'container' => false,
+                                )
+                            );
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-1 d-flex">
+                    <div class="menu">
+                        <?php
+                        if (has_nav_menu('footer-menu2')) { ?>
+                            <h4><?php echo get_field('footer_menu_title') ?></h4>
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-menu2',
+                                    'menu' => '',
+                                    'container' => false,
+                                )
+                            );
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-1 d-flex">
+                    <div class="menu">
+                        <?php
+                        if (has_nav_menu('footer-menu3')) { ?>
+                            <h4><?php echo get_field('footer_menu_title') ?></h4>
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-menu3',
+                                    'menu' => '',
+                                    'container' => false,
+                                )
+                            );
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-1 d-flex">
+                    <div class="menu">
+                        <?php
+                        if (has_nav_menu('footer-menu4')) { ?>
+                            <h4><?php echo get_field('footer_menu_title') ?></h4>
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-menu4',
+                                    'menu' => '',
+                                    'container' => false,
+                                )
+                            );
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
