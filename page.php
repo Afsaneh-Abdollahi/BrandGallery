@@ -4,8 +4,9 @@
  *
  * @author Afsaneh
  */
-get_header();
+get_header(); ?>
 
-?>
+
+aaaaaaaaaaa
 
 <?php get_footer(); ?>
