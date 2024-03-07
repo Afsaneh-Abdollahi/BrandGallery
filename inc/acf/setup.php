@@ -126,5 +126,96 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
+    acf_add_local_field_group(array(
+        'key' => 'group_61d184ec68ee8',
+        'title' => 'شبکه های اجتماعی',
+        'fields' => array(
+            array(
+                'key' => 'field_61d185c442df3',
+                'label' => 'افزودن شبکه های اجتماعی',
+                'name' => 'social_media_repeater',
+                'type' => 'repeater',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'collapsed' => '',
+                'min' => 0,
+                'max' => 0,
+                'layout' => 'table',
+                'button_label' => '',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_61d185da42df4',
+                        'label' => 'آیکن',
+                        'name' => 'icon',
+                        'type' => 'select',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'choices' => array(
+                            'fa-instagram' => 'instagram',
+                            'fa-telegram' => 'telegram',
+                            'fa-whatsapp' => 'whatsapp',
+                        ),
+                        'default_value' => array(
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'ui' => 0,
+                        'return_format' => 'value',
+                        'ajax' => 0,
+                        'placeholder' => '',
+                    ),
+                    array(
+                        'key' => 'field_61d1866742df5',
+                        'label' => 'لینک',
+                        'name' => 'link',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'maxlength' => '',
+                    ),
+                ),
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'admin-site',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+
 endif;
 

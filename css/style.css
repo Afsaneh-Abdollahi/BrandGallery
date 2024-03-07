@@ -80,6 +80,10 @@ h5 {
     font-family: "IRANSans", "Arial", sans-serif;
 }
 
+p {
+    margin-bottom: 0 !important;
+}
+
 .clearfix {
     clear: both !important;
 }
@@ -135,10 +139,14 @@ footer .service-section span {
     font-size: .8rem;
 }
 footer .copyright {
-    text-align: center;
     background-color: #e0e0e0;
     border-top: 1px solid #C8C8C8;
     padding: 10px 0;
+}
+footer .copyright .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /*end footer*/
 

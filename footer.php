@@ -34,7 +34,16 @@
 
     </div>
     <div class="copyright">
-        <p>تمام حقوق مادی و معنوی این وب سایت متعلق به برند گالری می باشد.</p>
+        <div class="container-fluid">
+            <p>تمام حقوق مادی و معنوی این وب سایت متعلق به برند گالری می باشد.</p>
+            <ul class="footer-social">
+                <?php while (have_rows('social_media_repeater', 'option')) : the_row(); ?>
+                    <li><a href="<?php echo get_sub_field('link') ?>"><i
+                                    class="fab <?php echo get_sub_field('icon') ?>"></i></a></li>
+                <?php endwhile;
+                wp_reset_query(); ?>
+            </ul>
+        </div>
     </div>
 </footer>
 
