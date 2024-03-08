@@ -85,7 +85,7 @@
                     <div class="menu">
                         <?php
                         if (has_nav_menu('footer-menu4')) { ?>
-                            <h4><?php echo get_field('footer_menu_title') ?></h4>
+                            <h4><?php echo get_field('footer_menu_title'); ?></h4>
                             <?php
                             wp_nav_menu(
                                 array(

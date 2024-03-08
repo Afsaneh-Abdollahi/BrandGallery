@@ -49,6 +49,7 @@ function wp_blank_load_scripts() {
 	wp_enqueue_script('swiper', PATH . '/js/swiper.min.js',array('jquery'), null, true );
 	wp_enqueue_script('matchHeight', PATH . '/js/jquery.matchHeight-min.js',array('jquery'), null, true );
 	wp_enqueue_script('bootstrap', PATH . '/js/bootstrap.min.js',array('jquery'), null, true );
+	wp_enqueue_script('all.min', PATH . '/js/all.min.js',array('jquery'), null, true );
 	wp_enqueue_script('main-js', PATH . '/js/main.js',array('jquery'), null, true );
 
 
@@ -62,9 +63,9 @@ add_action( 'wp_enqueue_scripts', 'wp_blank_load_scripts' );
  */
 function wp_blank_load_styles() {
 	wp_enqueue_style('bootstrap', PATH . '/css/bootstrap.min.css',false,'1.1','all');
-	wp_enqueue_style('swiper', PATH . '/css/swiper.min.css',false,'1.1','all');
-	wp_enqueue_style('main-style', PATH . '/css/style.css',false,'1.1','all');
     wp_enqueue_style('all.min', PATH . '/css/all.min.css', false, null, 'all');
+    wp_enqueue_style('swiper', PATH . '/css/swiper.min.css',false,'1.1','all');
+	wp_enqueue_style('main-style', PATH . '/css/style.css',false,'1.1','all');
 }
 add_action( 'wp_enqueue_scripts', 'wp_blank_load_styles' );
 
