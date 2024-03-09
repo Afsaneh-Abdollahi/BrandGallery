@@ -149,6 +149,7 @@ header.site_header {
 .header-section .header-bottom .header-social {
     margin: 7px 0;
     float: left;
+    padding-left: 0;
 }
 
 .header-section .header-bottom .header-social li {
@@ -174,7 +175,7 @@ header.site_header {
 }
 
 .header-section .header-bottom .header-social li a:hover {
-    background-color: #ff0000;
+    background-color: #ea580c;
 }
 
 .header-section .header-main .header-left .account-box {
@@ -242,7 +243,7 @@ header.site_header {
 }
 
 .header-section .header-main .header-menu nav ul li a:hover {
-    color: #ff0000;
+    color: #ea580c;
 }
 
 .header-section .header-main .header-menu nav ul li ul {
@@ -302,7 +303,7 @@ header.site_header {
 }
 
 .header-section .header-main .header-menu nav ul li ul li a:hover {
-    color: #ff0000;
+    color: #ea580c;
 }
 
 .header-section .header-main .header-menu .header-logo,
@@ -415,7 +416,7 @@ footer .copyright .footer-social li a {
     font-size: 24px;
 }
 footer .copyright .footer-social li:hover a {
-    color: #ff0000;
+    color: #ea580c;
 }
 /*end footer*/
 

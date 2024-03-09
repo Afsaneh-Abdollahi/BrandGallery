@@ -35,7 +35,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
                             </div>
                             <div class="header-left">
-                                <a href="https://harirdibascarf.com/my-account/" class="account-box">
+                                <a href="<?php bloginfo('url'); ?>/my-account/" class="account-box">
                                     <i class="fa-solid fa-user"></i>
                                     <?php $current_user = wp_get_current_user(); ?>
                                     <?php  if (is_user_logged_in()) {?>
@@ -46,14 +46,14 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
                                 </a>
                                 <a href="<?php bloginfo('url'); ?>/cart/">
                                     <div class="header-cart">
-                                        <i class="fas fa-shopping-cart"></i>
+                                        <i class="fa-solid fa-cart-shopping"></i>
                                         <div class="cart_count"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></div>
                                     </div>
                                 </a>
                             </div>
                             <div class="header-center">
                                 <a href="<?php bloginfo('url'); ?>" class="header-logo">
-                                    <img src="" alt="">
+                                    <img src="<?php echo PATH ?>/img/logo.jpg">
                                 </a>
                             </div>
                             <div class="clearfix"></div>
