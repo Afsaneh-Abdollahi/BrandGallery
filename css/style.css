@@ -704,7 +704,7 @@ footer .copyright .footer-social li:hover a {
     color: #ea580c;
 }
 
-.footer-contact-us h3 {
+.footer h4 {
     font-size: 18px;
     color: #2b2911;
     font-weight: bold;
@@ -718,7 +718,7 @@ footer .copyright .footer-social li:hover a {
     font-weight: normal;
 }
 
-.menu {
+.footer .menu {
     margin: 20px 0;
 }
 .menu ul li a, .footer-contact-us ul li {
@@ -726,6 +726,9 @@ footer .copyright .footer-social li:hover a {
     color: #81858b;
     line-height: 35px;
     font-weight: bold;
+}
+.footer ul li {
+    display: block; !important;
 }
 /*end footer*/
 
