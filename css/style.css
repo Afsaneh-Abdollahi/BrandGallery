@@ -89,7 +89,11 @@ p {
 /*header*/
 /*-----------------Menu-----------------*/
 header{
-    background-color: #f6f6f6;
+    background-color: #fefefe;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+    -o-box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
 }
 
 .transparent-back {
@@ -132,6 +136,7 @@ header{
     margin-top: 5px;
     width: 80px;
     height: auto;
+    border-radius: 50%;
 }
 
 .left-menu {
@@ -384,7 +389,7 @@ header{
     display: block;
     cursor: pointer;
     float: left;
-    color: #FFF;
+    color: #363636;
     position: relative;
     top: 9px;
     right: -5px;
@@ -522,7 +527,7 @@ header .menu > ul > li > ul.normal-sub {
     left: auto;
     padding: 0;
     box-shadow: 1px 1px 15px rgb(0 0 0 / 15%);
-    top: 33px;
+    top: 50px;
 }
 
 header .menu > ul > li ul:after {
