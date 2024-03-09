@@ -365,7 +365,7 @@ header{
     -moz-transition: color .1s ease-out, background-color .1s ease-out;
 }
 
-.user-menu-list li:hover, .menu > ul > li > ul.normal-sub > li:hover {
+.user-menu-list li:hover, header .menu > ul > li > ul.normal-sub > li:hover {
     background-color: #eceaea;
     border-radius: 6px;
 }
@@ -391,19 +391,19 @@ header{
     font-size: 11px;
 }
 
-.menu .fa-times {
+header .menu .fa-times {
     display: none !important;
 }
 
-.menu {
+header .menu {
     margin-top: 15px;
 }
 
-ul.menu li a img {
+header ul.menu li a img {
     display: none !important;
 }
 
-.menu > ul {
+header .menu > ul {
     margin: 0 auto;
     width: 100%;
     list-style: none;
@@ -414,54 +414,34 @@ ul.menu li a img {
     box-sizing: border-box;
 }
 
-.menu > ul:before,
-.menu > ul:after {
+header .menu > ul:before,
+header .menu > ul:after {
     content: "";
     display: table;
 }
 
-.menu > ul:after {
+header .menu > ul:after {
     clear: both;
 }
 
-.menu > ul > li {
+header .menu > ul > li {
     padding: 0;
     margin: 0;
     display: inline-block;
     list-style: none;
 }
 
-.menu > ul > li:nth-child(2),
-.menu > ul > li:nth-child(4) {
-    display: none;
-}
 
-.menu > ul > li:nth-child(4) {
-    border-bottom: 1px solid #C5C5C5;
-}
-
-.menu > ul > li a {
+header .menu > ul > li a {
     text-decoration: none;
     padding: 6px 12px 10px;
     display: inline-block;
-    color: #fff;
+    color: #363636;
     font-size: 14px;
 }
 
-.menu > ul > li:hover {
-    background: #EEE;
-    border-radius: 5px;
-}
 
-.menu > ul > li:hover:before {
-    color: #323232;
-}
-
-.menu > ul > li:hover a {
-    color: #000;
-}
-
-.menu > ul > li > ul {
+header .menu > ul > li > ul {
     display: none;
     width: 100%;
     background: #fff;
@@ -477,17 +457,17 @@ ul.menu li a img {
     border-radius: 6px 0 6px 6px;
 }
 
-.menu > ul > li > ul:before,
-.menu > ul > li > ul:after {
+header .menu > ul > li > ul:before,
+header .menu > ul > li > ul:after {
     content: "";
     display: table;
 }
 
-.menu > ul > li > ul:after {
+header .menu > ul > li > ul:after {
     clear: both;
 }
 
-.menu > ul > li > ul > li {
+header .menu > ul > li > ul > li {
     margin: 0;
     padding-bottom: 0;
     list-style: none;
@@ -497,7 +477,7 @@ ul.menu li a img {
     list-style: none;
 }
 
-.menu > ul > li > ul > li a {
+header .menu > ul > li > ul > li a {
     color: #777;
     padding: 0.2em 0;
     width: 95%;
@@ -505,7 +485,7 @@ ul.menu li a img {
     direction: rtl;
 }
 
-.menu > ul > li > ul > li > ul {
+header .menu > ul > li > ul > li > ul {
     display: block;
     padding: 0;
     margin: 10px 0 0;
@@ -515,17 +495,17 @@ ul.menu li a img {
     box-sizing: border-box;
 }
 
-.menu > ul > li > ul > li > ul:before,
-.menu > ul > li > ul > li > ul:after {
+header .menu > ul > li > ul > li > ul:before,
+header .menu > ul > li > ul > li > ul:after {
     content: "";
     display: table;
 }
 
-.menu > ul > li > ul > li > ul:after {
+header .menu > ul > li > ul > li > ul:after {
     clear: both;
 }
 
-.menu > ul > li > ul > li > ul > li {
+header .menu > ul > li > ul > li > ul > li {
     width: 100%;
     padding: 10px 0;
     margin: 0;
@@ -533,11 +513,11 @@ ul.menu li a img {
     list-style: none;
 }
 
-.menu > ul > li > ul > li > ul > li a {
+header .menu > ul > li > ul > li > ul > li a {
     border: 0;
 }
 
-.menu > ul > li > ul.normal-sub {
+header .menu > ul > li > ul.normal-sub {
     width: 210px;
     left: auto;
     padding: 0;
@@ -545,7 +525,7 @@ ul.menu li a img {
     top: 33px;
 }
 
-.menu > ul > li ul:after {
+header .menu > ul > li ul:after {
     content: '';
     position: absolute;
     top: 6px;
@@ -560,7 +540,7 @@ ul.menu li a img {
     border-right: solid 10px transparent;
 }
 
-.menu > ul > li > ul.normal-sub > li {
+header .menu > ul > li > ul.normal-sub > li {
     width: 100%;
     list-style: none;
     /*display: contents;*/
@@ -568,16 +548,16 @@ ul.menu li a img {
     padding: 0 15px;
 }
 
-.menu > ul > li > ul.normal-sub > li a {
+header .menu > ul > li > ul.normal-sub > li a {
     border: 0;
     padding: 1em 0;
 }
 
-.menu > ul > li > ul.normal-sub > li:first-child a {
+header .menu > ul > li > ul.normal-sub > li:first-child a {
     padding-top: 20px !important;
 }
 
-.menu .fa-chevron-down {
+header .menu .fa-chevron-down {
     font-size: 10px;
     position: relative;
     top: 1px;
