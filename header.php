@@ -20,83 +20,149 @@ $custom_logo_id = get_theme_mod('fe');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?> >
 
-<header class="site_header">
+<header class="main-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="burger-menu mobile-menu"><i class="far fa-bars"></i></button>
+                <a href="<?php echo home_url(); ?>" class="logo">
+                    <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.jpg"
+                         alt="logo">
+                </a>
+                <div class="left-icons">
+                    <a href="<?php bloginfo('url'); ?>/cart/">
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
 
-    <div class="header-section">
-        <div class="header-main">
-            <div class="container">
-                <div class="header-top">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="header-right">
-                                <div class="search-box desktop">
-                                    <?php echo do_shortcode(get_field('search_shortcode', 'option') ); ?>
-                                </div>
-
-                            </div>
-                            <div class="header-left">
-                                <a href="<?php bloginfo('url'); ?>/my-account/" class="account-box">
-                                    <i class="fa-solid fa-user"></i>
-                                    <?php $current_user = wp_get_current_user(); ?>
-                                    <?php  if (is_user_logged_in()) {?>
-                                        <span><?php echo $current_user->user_firstname ."  ". $current_user->user_lastname?></span>
-                                    <?php }else { ?>
-                                        <span>ورود / عضویت</span>
-                                    <?php } ?>
-                                </a>
-                                <a href="<?php bloginfo('url'); ?>/cart/">
-                                    <div class="header-cart">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                        <div class="cart_count"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="header-center">
-                                <a href="<?php bloginfo('url'); ?>" class="header-logo">
-                                    <img src="<?php echo PATH ?>/img/logo.jpg">
-                                </a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
+                        <span class="cart-counter">
+                                <?php echo WC()->cart->get_cart_contents_count(); ?>
+                            </span>
+                    </a>
+                    <a href="<?php bloginfo('url'); ?>/my-account/">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="search-box mobile">
-                            <?php echo do_shortcode(get_field('search_shortcode', 'option') ); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header-bottom">
-                            <button class="burger-menu"><i class="fas fa-bars"></i></button>
-                            <div class="header-menu">
-                                <button class="close-menu"><i class="fa fa-times"></i></button>
-                                <a href="<?php bloginfo('url'); ?>" class="header-logo">
-                                    <img src="" alt="">
+                <div class="left-menu">
+                    <ul>
+                        <li>
+                            <?php if (is_user_logged_in()) : ?>
+                                <a class="header__details-user">
+                                    <?php
+
+                                    global $current_user;
+                                    echo $current_user->display_name
+                                    ?>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+
                                 </a>
-                                <nav>
-                                    <?php wp_nav_menu(array('theme_location' => 'header-main-menu', 'container' => 'ul')) ?>
-                                </nav>
-                            </div>
-                            <?php if (have_rows('social_media_repeater', 'option')): ?>
-                                <ul class="header-social">
-                                    <?php while (have_rows('social_media_repeater', 'option')) : the_row(); ?>
-                                        <li><a href="<?php echo get_sub_field('link') ?>"><i
-                                                        class="fab <?php echo get_sub_field('icon') ?>"></i></a></li>
-                                    <?php endwhile;
-                                    wp_reset_query(); ?>
-                                </ul>
-                                <div class="clearfix"></div>
+                            <?php else : ?>
+                                <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
+                                    <?php
+                                    echo 'ورود | ثبت نام';
+                                    ?>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+
+                                </a>
                             <?php endif; ?>
+
+                            <?php
+                            if (is_user_logged_in()) { ?>
+                                <div class="user-menu-list">
+                                    <ul>
+                                        <li>
+                                            <img src="<?php echo get_template_directory_uri() ?>/img/wallet-pro.svg"
+                                                 alt="" class="wallet">
+                                            <?php
+                                            if (is_plugin_active('woo-wallet/woo-wallet.php')) {
+
+                                                $title = __('Current wallet balance', 'woo-wallet');
+                                                $menu_item = '<a class="woo-wallet-menu-contents" href="' . esc_url(wc_get_account_endpoint_url(get_option('woocommerce_woo_wallet_endpoint', 'woo-wallet'))) . '" title="' . $title . '">';
+                                                $menu_item .= 'اعتبار: ';
+                                                $menu_item .= woo_wallet()->wallet->get_wallet_balance(get_current_user_id());
+                                                $menu_item .= '</a>';
+
+                                                echo $menu_item;
+                                            } else {
+                                                echo '<a href="#" class="wc-Symbol">0 تومان</a>';
+                                            }
+                                            ?>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="" class="">
+                                                <img src=""
+                                                     alt="">
+                                                پیشخوان
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <img src=""
+                                                     alt="">
+                                                سفارشات
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href=""
+                                               class="color">
+                                                <img src=""
+                                                     alt="">
+                                                اطلاعات حساب کاربری
+                                            </a>
+                                        </li>
+                                        <li class="log-out">
+                                            <a href="">
+                                                <img src=""
+                                                     alt=""> خروج
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </li>
+
+                        <li>
+                            <a href="<?php bloginfo('url'); ?>/cart/">سبد خرید <i
+                                        class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            </a>
+                            <span class="cart-counter">
+                                <?php echo WC()->cart->get_cart_contents_count(); ?>
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="toparea menu">
+                                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container' => 'ul')) ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="search-form" role="search">
+                            <?php echo do_shortcode(get_field('search_shortcode', 'option') ); ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </header>
 
 
