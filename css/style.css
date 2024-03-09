@@ -1,42 +1,27 @@
 @font-face {
-    font-family: 'IRANSans';
-    src: url('../fonts/eot/IRANSansWeb.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/woff/IRANSansWeb.woff') format('woff2'), /* Super Modern Browsers */ url('../fonts/woff/IRANSansWeb.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ttf/IRANSansWeb.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/svg/IRANSansWeb.svg#svgFontName') format('svg'); /* Legacy iOS */
-    font-weight: 100;
+    font-family: Dana-Bold;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/eot/dana-fanum-bold.eot');
+    src: url('../fonts/eot/dana-fanum-bolditalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/woff2/dana-fanum-bold.woff2') format('woff2'),
+    url('../fonts/woff/dana-fanum-bold.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'IRANSans';
-    src: url('../fonts/eot/IRANSansWeb_UltraLight.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/woff/IRANSansWeb_UltraLight.woff') format('woff2'), /* Super Modern Browsers */ url('../fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/svg/IRANSansWeb_UltraLight.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: Dana;
+    font-style: normal;
     font-weight: normal;
-}
-
-@font-face {
-    font-family: 'IRANSans';
-    src: url('../fonts/eot/IRANSansWeb_Light.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/woff/IRANSansWeb_Light.woff') format('woff2'), /* Super Modern Browsers */ url('../fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ttf/IRANSansWeb_Light.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/svg/IRANSansWeb_Light.svg#svgFontName') format('svg'); /* Legacy iOS */
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'IRANSans';
-    src: url('../fonts/eot/IRANSansWeb_Medium.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/woff/IRANSansWeb_Medium.woff') format('woff2'), /* Super Modern Browsers */ url('../fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/svg/IRANSansWeb_Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'IRANSans';
-    src: url('../fonts/eot/IRANSansWeb_Bold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/woff/IRANSansWeb_Bold.woff') format('woff2'), /* Super Modern Browsers */ url('../fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/svg/IRANSansWeb_Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
-    font-weight: 700;
+    src: url('../fonts/eot/dana-fanum-regular.eot');
+    src: url('../fonts/eot/dana-fanum-regularitalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/woff2/dana-fanum-regular.woff2') format('woff2'),
+    url('../fonts/woff/dana-fanum-regular.woff') format('woff');
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "IRANSans", "Arial", sans-serif ;
+    font-family: "Dana", "Arial", sans-serif ;
 
 }
 
@@ -173,10 +158,10 @@ header.site_header {
 }
 
 .header-section .header-bottom .header-social li a {
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     display: block;
-    line-height: 30px;
+    line-height: 33px;
     background-color: #616161;
     border-radius: 50%;
     color: #ffffff;
