@@ -24,7 +24,6 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <button class="burger-menu mobile-menu"><i class="far fa-bars"></i></button>
                 <a href="<?php echo home_url(); ?>" class="logo">
                     <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.jpg"
                          alt="logo">
@@ -152,13 +151,13 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
                 <div class="clearfix"></div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="search-form" role="search">
-                            <?php echo do_shortcode(get_field('search_shortcode', 'option') ); ?>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-12">-->
+<!--                        <div class="search-form" role="search">-->
+<!--                            --><?php //echo do_shortcode(get_field('search_shortcode', 'option') ); ?>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
