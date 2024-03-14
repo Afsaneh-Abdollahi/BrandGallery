@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog Home Page
+ * Template Name: Home Page
  *
  * @author Afsaneh
  */
