@@ -46,6 +46,8 @@ add_action( 'after_setup_theme', 'wp_blank_setup' );
  */
 function wp_blank_load_scripts() {
 	wp_enqueue_script('jquery-min', PATH . '/js/jquery.min.js',array('jquery'), null, true );
+    wp_enqueue_script('resize', PATH . '/js/ResizeSensor.min.js',array('jquery'), null, true );
+    wp_enqueue_script('sticky', PATH . '/js/theia-sticky-sidebar.min.js',array('jquery'), null, true );
 	wp_enqueue_script('swiper', PATH . '/js/swiper.min.js',array('jquery'), null, true );
 	wp_enqueue_script('matchHeight', PATH . '/js/jquery.matchHeight-min.js',array('jquery'), null, true );
 	wp_enqueue_script('bootstrap', PATH . '/js/bootstrap.min.js',array('jquery'), null, true );

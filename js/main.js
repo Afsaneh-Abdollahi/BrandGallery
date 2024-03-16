@@ -106,4 +106,12 @@ $(document).ready(function () {
 
     $('.swiper-slide .card').matchHeight();
     $('.sec5 .tab-content .card').matchHeight();
+
+    if ($('.content') && $('.sidebar')) {
+        jQuery('.content, .sidebar').theiaStickySidebar({
+            // Settings
+            additionalMarginTop: 30
+        });
+    }
+
 });
