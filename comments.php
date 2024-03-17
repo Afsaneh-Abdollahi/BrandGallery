@@ -82,8 +82,8 @@
                 <div class="comment">
                     <div class="comment-in">
                         <div class="author">
-                            <i class="icon-reply"></i>
-                            <i class="icon-user"></i>
+                            <i class="fas fa-reply"></i>
+                            <i class="fas fa-user"></i>
                             <p><?php echo $comment->comment_author; ?></p>
                         </div>
                         <div class="author_comment">
@@ -115,7 +115,7 @@
                         'type' => 'comment',
                         'callback' => 'top_comment',
                         'max_depth' => 5,
-                        'reply_text' => '<i class="icon-reply"></i>',
+                        'reply_text' => '<i class="fas fa-reply"></i>',
                     ));
 
                     ?>
