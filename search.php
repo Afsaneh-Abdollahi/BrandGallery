@@ -24,9 +24,17 @@ get_header(); ?>
                                      alt="<?php echo the_title(); ?>">
                             </div>
                             <div class="card-body">
-                                <h5><?php echo the_title(); ?></h5>
-                                <a class="outline_btn"
-                                   href="<?php echo the_permalink(); ?>">ادامه</a>
+                                <div class="name"><?php echo the_title(); ?></div>
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                the_views();
+                                            } ?></span></li>
+                                </ul>
+                                <p><?php echo the_excerpt(); ?></p>
                             </div>
                         </div>
                     </div>

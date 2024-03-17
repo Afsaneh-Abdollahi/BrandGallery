@@ -79,6 +79,16 @@ get_header(); ?>
                                              alt="<?php echo the_title(); ?>">
                                         <div class="card-body">
                                             <div class="name"><?php echo the_title(); ?></div>
+                                            <ul>
+                                                <li>
+                                                    <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                            the_views();
+                                                        } ?></span></li>
+                                            </ul>
+                                            <p><?php echo the_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </a>
@@ -122,6 +132,16 @@ get_header(); ?>
                                              alt="<?php echo the_title(); ?>">
                                         <div class="card-body">
                                             <div class="name"><?php echo the_title(); ?></div>
+                                            <ul>
+                                                <li>
+                                                    <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                            the_views();
+                                                        } ?></span></li>
+                                            </ul>
+                                            <p><?php echo the_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </a>
@@ -206,7 +226,7 @@ get_header(); ?>
 
                         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-5 ">
                             <?php while ($query->have_posts()) : $query->the_post(); ?>
-                                <div class="col-sm-6">
+                                <div class="col">
                                     <a href="<?php echo the_permalink(); ?>">
                                         <div class="card">
                                             <div class="img">
@@ -216,6 +236,16 @@ get_header(); ?>
                                             </div>
                                             <div class="card-body">
                                                 <div class="name"><?php echo the_title(); ?></div>
+                                                <ul>
+                                                    <li>
+                                                        <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                                the_views();
+                                                            } ?></span></li>
+                                                </ul>
+                                                <p><?php echo the_excerpt(); ?></p>
                                             </div>
                                         </div>
                                     </a>
@@ -254,7 +284,7 @@ get_header(); ?>
                             <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-5 ">
                                 <?php $j = 1;
                                 while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                                    <div class="col-sm-6">
+                                    <div class="col">
                                         <a href="<?php echo the_permalink(); ?>">
                                             <div class="card">
                                                 <div class="img">
@@ -264,6 +294,16 @@ get_header(); ?>
                                                 </div>
                                                 <div class="card-body">
                                                     <div class="name"><?php echo the_title(); ?></div>
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                                    the_views();
+                                                                } ?></span></li>
+                                                    </ul>
+                                                    <p><?php echo the_excerpt(); ?></p>
                                                 </div>
                                             </div>
                                         </a>
@@ -315,6 +355,16 @@ get_header(); ?>
                                         </div>
                                         <div class="card-body">
                                             <div class="name"><?php echo the_title(); ?></div>
+                                            <ul>
+                                                <li>
+                                                    <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                            the_views();
+                                                        } ?></span></li>
+                                            </ul>
+                                            <p><?php echo the_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </a>

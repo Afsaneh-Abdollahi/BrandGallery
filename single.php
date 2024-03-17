@@ -39,10 +39,19 @@ $args = array(
 
                         <div class="info_box">
                             <ul>
-                                <li><i class="fab fa-calendar"></i> تاریخ انتشار:
+                                <li><i class="fas fa-calendar"></i> تاریخ انتشار:
                                     <span><?php echo get_the_date(); ?></span></li>
-                                <li><i class="fab fa-refresh"></i> تاریخ به روز رسانی:
+                                <li><i class="fas fa-refresh"></i> تاریخ به روز رسانی:
                                     <span><?php echo the_modified_time('Y/m/d'); ?></span></li>
+                                <li>
+                                    <i class="fas fa-comments"></i>تعداد دیدگاه :
+                                    <span><?php echo comments_number(); ?></span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-eye"></i>تعداد بازدید :
+                                    <span><?php if (function_exists('the_views')) {
+                                            the_views();
+                                        } ?></span></li>
                             </ul>
                         </div>
 
@@ -130,6 +139,16 @@ $args = array(
                                                         </div>
                                                         <div class="card-body">
                                                             <div class="name"><?php echo the_title(); ?></div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                                </li>
+                                                                <li>
+                                                                    <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                                            the_views();
+                                                                        } ?></span></li>
+                                                            </ul>
+                                                            <p><?php echo the_excerpt(); ?></p>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -210,6 +229,15 @@ $args = array(
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="name"><?php echo the_title(); ?></div>
+                                                        <ul>
+                                                            <li>
+                                                                <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
+                                                            </li>
+                                                            <li>
+                                                                <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
+                                                                        the_views();
+                                                                    } ?></span></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </a>
