@@ -132,7 +132,7 @@ header{
 }
 
 .left-menu ul li:first-child {
-    border: 1px solid #363636;
+    border: 1px solid var(--text-color);
     border-radius: 6px;
     margin-right: 5px;
     transition: background-color .4s linear;
@@ -144,13 +144,13 @@ header{
 
 .left-menu ul li:first-child:hover a,
 .left-menu ul li:first-child:hover svg {
-    color: #363636;
+    color: var(--text-color);
 }
 
 .left-menu a {
     display: inline-block;
     text-decoration: none;
-    color: #363636;
+    color: var(--text-color);
     font-size: 13px;
     position: relative;
     margin: 2px 18px 0px 0;
@@ -163,7 +163,7 @@ header{
     right: -20px !important;
     font-size: 19px;
     font-weight: 200;
-    color: #363636;
+    color: var(--text-color);
 }
 
 .left-icons a svg {
@@ -171,7 +171,7 @@ header{
     top: -5px !important;
     font-size: 22px;
     font-weight: 200;
-    color: #363636;
+    color: var(--text-color);
     left: 12px;
     margin-right: 10px;
 }
@@ -203,7 +203,7 @@ header{
     line-height: 19px;
     height: 15px;
     border-radius: 50%;
-    background-color: #ED0209;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
 }
@@ -289,7 +289,7 @@ header{
 .user-menu-list li.log-out svg {
     margin-left: 5px;
     font-size: 18px;
-    color: #ED0209;
+    color: var(--primary-color);
     font-weight: 400;
 }
 
@@ -457,8 +457,8 @@ main {
     font-weight: 500 !important;
     text-align: center;
     cursor: pointer;
-    background-color: #188793;
-    border: 1px solid #188793;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .blog .outline_btn {
@@ -474,13 +474,13 @@ main {
     font-weight: 500 !important;
     text-align: center;
     cursor: pointer;
-    border: 1px solid #188793;
-    color: #188793;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .blog .outline_btn:hover {
     color: #ffffff !important;
-    background-color: #188793;
+    background-color: var(--primary-color);
 }
 
 .blog .sec1 {
@@ -613,7 +613,7 @@ main {
     content: "";
     height: 3px;
     width: 70%;
-    background-color: #d60644;
+    background-color: var(--primary-color);
     position: absolute;
     left: unset;
     right: 0;
@@ -742,12 +742,12 @@ main {
     background: transparent;
     font-size: 16px;
     font-weight: 500;
-    border: 1px solid #188793;
-    color: #188793;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .blog .sec5 .category .nav-link.active {
-    background: #E8F3F4;
+    background-color: var(--primary-color-op);
 }
 
 .blog .sec5 .tab-pane.active .card {
@@ -908,7 +908,7 @@ main {
     -webkit-border-radius: 8px;
     padding: 36px 64px;
     margin: 40px 0 80px;
-    background-color: #E8F3F4;
+    background-color: var(--primary-color-op);
     position: relative;
 }
 .blog.single .blue_bg p {
@@ -950,7 +950,7 @@ main {
     position: absolute;
     right: 0;
     top: 13px;
-    background-color: #188793;
+    background-color: var(--primary-color);
 }
 
 .blog.single .blue_bg ul li:last-child {
@@ -962,7 +962,7 @@ main {
 }
 
 .blog.single .blue_bg ul li a {
-    color: #167A84;
+    color: var(--primary-color);
     font-size: 20px;
     font-weight: 500;
 }
@@ -982,7 +982,7 @@ main {
 .blog.single .single_content .navigate_posts .navigate_box p a {
     font-size: 20px;
     font-weight: 500;
-    color: #188793;
+    color: var(--primary-color);
 }
 
 .blog.single .single_content .navigate_posts .navigate_box {
@@ -1103,7 +1103,7 @@ main {
     -webkit-box-shadow: -1px 2px 6px 0px rgba(0, 0, 0, 0.25);
     padding: 16px;
     position: relative;
-    background-color: #E8F3F4;
+    background-color: var(--primary-color);
 }
 
 .blog.single .single_comment .comment .comment-in .author {
@@ -1240,6 +1240,7 @@ main {
     width: 48px;
     height: 48px;
     margin-left: 16px;
+    color: var(--primary-color);
 }
 
 .main_card.in .social li {
@@ -1412,7 +1413,7 @@ footer .copyright .footer-social li a {
     font-size: 24px;
 }
 footer .copyright .footer-social li:hover a {
-    color: #ea580c;
+    color: var(--primary-color);
 }
 
 .footer h4 {

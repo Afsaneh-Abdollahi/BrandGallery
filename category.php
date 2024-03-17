@@ -37,8 +37,8 @@
                 if ($the_query->have_posts()) : ?>
                     <section class="mb-5">
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="cat_title m-0">
-                                <?php echo $subCat->name; ?>
+                            <div class="title cat_title m-0">
+                                <h3><?php echo $subCat->name; ?></h3>
                             </div>
                             <a href="<?php echo get_category_link($subCat) ?>" class="outline_btn" id="loadMore">مشاهده
                                 بیشتر</a>
@@ -90,8 +90,8 @@
             <?php
         } else { ?>
 
-            <div class="cat_title">
-                <?php echo single_cat_title(); ?>
+            <div class="title cat_title">
+                <h3><?php echo single_cat_title(); ?></h3>
             </div>
 
             <?php
