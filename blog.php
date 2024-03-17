@@ -52,7 +52,7 @@ get_header(); ?>
 
         <section class="sec2">
             <div class="title">
-                جدیدترین مقالات
+                <h3>جدیدترین مقالات</h3>
             </div>
             <?php
 
@@ -107,7 +107,7 @@ get_header(); ?>
 
         <section class="sec3">
             <div class="title">
-                پرطرفدارترین/پربازدیدترین مقالات
+                <h3>پرطرفدارترین/پربازدیدترین مقالات</h3>
             </div>
             <?php
             $args = array(
@@ -183,7 +183,7 @@ get_header(); ?>
         ?>
         <section class="sec5">
             <div class="title">
-                دسته بندی
+                <h3>دسته بندی</h3>
             </div>
 
             <?php if ($category): ?>
@@ -337,7 +337,7 @@ get_header(); ?>
         if ($special_post) { ?>
             <section class="sec6">
                 <div class="title">
-                    مقالات منتخب
+                    <h3>مقالات منتخب</h3>
                 </div>
                 <!-- Slider main container -->
                 <div class="swiper swiper_posts">

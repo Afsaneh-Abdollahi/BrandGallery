@@ -1,4 +1,3 @@
-<?php //$web_general_options = hb_get_option('web_general_group') ?>
 <div class="blog">
     <div class="container-fluid">
         <?php
@@ -12,13 +11,10 @@
 
             <div>
                 <div class="row">
-                    <div class="col text-right mr1">
+                    <div class="col text-center">
                         <div class="title">
-                            وبلاگ
+                            <h3>وبلاگ</h3>
                         </div>
-                    </div>
-                    <div class="col text-left">
-                        <a href="<?php echo get_post_type_archive_link('blog'); ?>" class="more">مشاهده همه</a>
                     </div>
                 </div>
                 <!-- Slider main container -->

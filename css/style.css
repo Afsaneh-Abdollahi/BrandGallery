@@ -594,13 +594,41 @@ main {
     color: #ffffff;
 }
 
-.blog .title {
+.title {
+    margin-bottom: 24px;
     color: #5E5E5E;
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 24px;
 }
 
+.title h3 {
+    color: #5E5E5E;
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+}
+.title h3:after {
+    content: "";
+    height: 3px;
+    width: 70%;
+    background-color: #d60644;
+    position: absolute;
+    left: unset;
+    right: 0;
+    bottom: -5px;
+}
+.title h3:before {
+    content: "";
+    height: 3px;
+    width: calc(30% - 10px);
+    background-color: #5E5E5E;
+    position: absolute;
+    left: 0;
+    right: unset;
+    bottom: -5px;
+}
 .blog .newsletter_box  {
     border-radius: 8px;
     -moz-border-radius: 8px;

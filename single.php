@@ -119,7 +119,7 @@ $args = array(
                             ?>
                             <div class="related_posts" id="related_posts">
                                 <div class="title">
-                                    مقالات مرتبط
+                                   <h3>مقالات مرتبط</h3>
                                 </div>
 
                                 <!-- Slider main container -->
