@@ -68,6 +68,7 @@ function wp_blank_load_styles() {
     wp_enqueue_style('all.min', PATH . '/css/all.min.css', false, null, 'all');
     wp_enqueue_style('swiper', PATH . '/css/swiper.min.css',false,'1.1','all');
 	wp_enqueue_style('main-style', PATH . '/css/style.css',false,'1.1','all');
+	wp_enqueue_style('custom-colors', PATH . '/css/colors.css',false,'1.1','all');
 }
 add_action( 'wp_enqueue_scripts', 'wp_blank_load_styles' );
 

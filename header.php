@@ -25,7 +25,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
         <div class="row">
             <div class="col-lg-12">
                 <a href="<?php echo home_url(); ?>" class="logo">
-                    <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/logo.jpg"
+                    <img class="logo" src="<?php echo get_field('logo', 'option') ?>"
                          alt="logo">
                 </a>
                 <div class="left-icons">
