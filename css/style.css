@@ -92,7 +92,7 @@ header {
 .logo {
     float: right;
     margin-top: 5px;
-    width: 70px;
+    width: 60px;
     height: auto;
     border-radius: 50%;
 }
@@ -102,6 +102,7 @@ header {
     cursor: pointer;
     direction: ltr;
     color: #fff;
+    float: left;
 }
 
 .left-menu ul {
@@ -1388,6 +1389,46 @@ main {
 
 /*end blog*/
 
+/*about us*/
+.about{
+    padding: 50px 0;
+}
+.banner-about{
+    position: relative;
+    height: 260px;
+    margin-bottom: 30px;
+}
+.section-top-about .banner-about img{
+    object-position: center;
+    -o-object-position: center;
+    object-fit: cover;
+    -o-object-fit: cover;
+    width: 100%;
+    height: 259px;
+    z-index: 0;
+    position: relative;
+}
+.section-top-about .banner-about-color{
+    background-color: #d6064470;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.section-top-about .banner-about h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 2;
+}
+/*end about us*/
 /*footer*/
 
 footer {

@@ -5,14 +5,18 @@
  * @author Afsaneh
  */
 get_header(); ?>
-<main>
+<main class="about">
     <section class="section-top-about">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-
-                    <div class="title">
-                        <h3>درباره ما</h3>
+                    <div class="col-lg-12">
+                        <div class="banner-about ">
+                            <img src="<?php echo get_field('cover') ?>" alt="">
+                            <div class="banner-about-color">
+                                <h1>درباره ما</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
