@@ -302,6 +302,21 @@ main {
     padding-top: 50px;
 }
 
+.swiper_brands .card img {
+    max-width: 100px;
+}
+
+.swiper_brands .card {
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination {
+    margin-top: 15px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+}
 /*end main*/
 
 /*blog*/

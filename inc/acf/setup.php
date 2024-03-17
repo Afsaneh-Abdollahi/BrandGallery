@@ -1023,3 +1023,79 @@ if( function_exists('acf_add_local_field_group') ):
     ));
 
 endif;
+
+if( function_exists('acf_add_local_field_group') ):
+
+    acf_add_local_field_group(array(
+        'key' => 'group_65f73e6dd2d09',
+        'title' => 'تنظیمات برندها',
+        'fields' => array(
+            array(
+                'key' => 'field_65f73e8a623e7',
+                'label' => 'لوگو برند',
+                'name' => 'brand_logo',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_65f73e9e623e8',
+                'label' => 'تصویر برند',
+                'name' => 'brand_image',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'brands',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+
+endif;

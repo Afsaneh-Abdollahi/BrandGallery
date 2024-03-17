@@ -2,6 +2,7 @@
 define('PATH', get_template_directory_uri());
 
 require_once 'inc/menu.php';
+require_once 'inc/cpt.php';
 require get_template_directory() . '/inc/customizer.php';
 require_once(TEMPLATEPATH . '/inc/acf/setup.php');
 

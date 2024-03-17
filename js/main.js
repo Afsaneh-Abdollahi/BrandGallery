@@ -58,6 +58,46 @@ $(document).ready(function () {
 
     });
 
+    const brands = new Swiper('.swiper_brands', {
+        // Optional parameters
+        spaceBetween: 5,
+        slidesPerView: 2,
+        direction: 'horizontal',
+        loop: false,
+        autoplay: {
+            delay: 5000,
+        },
+        // responsive
+        breakpoints: {
+            992: {
+                spaceBetween: 50,
+                slidesPerView: 6,
+            },
+            576: {
+                spaceBetween: 10,
+                slidesPerView: 4,
+            }
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+
+    });
+
     // load more items
     $(".blog .sec5 .tab-content .tab-pane.active .card").slice(0, 15).show();
     $(".blog .sec5 .tab-content .tab-pane.active #loadMore").on("click", function (e) {
