@@ -320,6 +320,7 @@ main {
 .blog-section,
 .tabs-section,
 .brand-section,
+.products-section,
 .intro-section{
     padding: 25px 0;
 }
@@ -398,7 +399,11 @@ main {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
-    line-height: 22px;
+    line-height: 28px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .product-item {
     overflow: hidden;
