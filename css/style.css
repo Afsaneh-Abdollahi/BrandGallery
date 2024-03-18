@@ -1413,7 +1413,7 @@ main {
     height: 260px;
     margin-bottom: 30px;
 }
-.section-top-about .banner-about img{
+.section-top-cover .banner-about img{
     object-position: center;
     -o-object-position: center;
     object-fit: cover;
@@ -1423,8 +1423,8 @@ main {
     z-index: 0;
     position: relative;
 }
-.section-top-about .banner-about-color{
-    background-color: #d6064470;
+.section-top-cover .banner-about-color{
+    background-color: var(--primary-color-op);
     z-index: 1;
     position: absolute;
     top: 0px;
@@ -1432,7 +1432,7 @@ main {
     left: 0;
     bottom: 0;
 }
-.section-top-about .banner-about h1{
+.section-top-cover .banner-about h1{
     position: absolute;
     top: 50%;
     left: 50%;
