@@ -6,8 +6,8 @@
             echo ' :';
         } ?><?php bloginfo('name'); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="author" content="RamzArz"/>
-    <meta name="keywords" content="RamzArz"/>
+    <meta name="author" content="BrandGallery"/>
+    <meta name="keywords" content="BrandGallery"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 

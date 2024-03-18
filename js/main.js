@@ -61,7 +61,7 @@ $(document).ready(function () {
     const swiper_tab = new Swiper('.swiper_tab', {
         // Optional parameters
         spaceBetween: 12,
-        slidesPerView: 1.5,
+        slidesPerView: 2,
         direction: 'horizontal',
         loop: false,
 
@@ -77,7 +77,7 @@ $(document).ready(function () {
             },
             576: {
                 spaceBetween: 12,
-                slidesPerView: 2.2,
+                slidesPerView: 3,
             }
         },
 
@@ -133,6 +133,27 @@ $(document).ready(function () {
             el: '.swiper-scrollbar',
         },
 
+    });
+
+    var swiper_intro2 = new Swiper(".swiper-intro2", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        autoplay:  {
+            delay: 10000,
+        },
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
     });
 
     // load more items

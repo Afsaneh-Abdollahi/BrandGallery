@@ -71,7 +71,7 @@
                                                 } ?>
                                                 <div class="img">
                                                     <img src="<?php the_post_thumbnail_url(); ?>"
-                                                         alt="<?php the_title(); ?>" class="img-fluid card-img-top">
+                                                         alt="<?php the_title(); ?>" class="img-fluid">
                                                 </div>
                                                 <div class="card-body">
                                                     <h4 class="h6 name">
