@@ -1,4 +1,4 @@
-<div class="blog">
+<div class="blog blog-section">
     <div class="container-fluid">
         <?php
         $args = array(

@@ -1,4 +1,4 @@
-<div class="brands">
+<div class="brands brand-section">
     <div class="container-fluid">
 
         <?php

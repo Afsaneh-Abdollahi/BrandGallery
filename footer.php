@@ -33,7 +33,6 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-1 d-flex">
                     <div class="menu">
                         <?php
-//
                         if (has_nav_menu('footer-menu1')) {
                             $menu_obj = wp_get_nav_menu_object('footer-menu1');
                             $menu = wp_get_nav_menu_object( $menu_obj->term_id );
@@ -119,7 +118,7 @@
                         <h4>تماس با ما</h4>
                         <ul>
                             <?php while (have_rows('contact_us_repeater', 'option')) : the_row(); ?>
-                                <li> <?php echo get_sub_field('title'); ?> :
+                                <li><i class="fas <?php echo  get_sub_field('icon'); ?>"></i> <?php echo get_sub_field('title'); ?> :
                                     <span><?php echo get_sub_field('value'); ?></span>
                                 </li>
                             <?php endwhile;

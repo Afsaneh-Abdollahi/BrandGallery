@@ -58,6 +58,43 @@ $(document).ready(function () {
 
     });
 
+    const swiper_tab = new Swiper('.swiper_tab', {
+        // Optional parameters
+        spaceBetween: 12,
+        slidesPerView: 1.5,
+        direction: 'horizontal',
+        loop: false,
+
+        //responsive {
+        breakpoints: {
+            992: {
+                spaceBetween: 24,
+                slidesPerView: 6,
+            },
+            768: {
+                spaceBetween: 24,
+                slidesPerView: 4,
+            },
+            576: {
+                spaceBetween: 12,
+                slidesPerView: 2.2,
+            }
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+
     const brands = new Swiper('.swiper_brands', {
         // Optional parameters
         spaceBetween: 5,
@@ -146,6 +183,13 @@ $(document).ready(function () {
 
     $('.swiper-slide .card').matchHeight();
     $('.sec5 .tab-content .card').matchHeight();
+    $(".tabs-section .swiper_tab .nav-link").on("click", function (e) {
+        $('.tabs-section .swiper_tab .card').matchHeight();
+    });
+    $('.tabs-section .swiper_tab .card').matchHeight();
+
+
+
 
     if ($('.content') && $('.sidebar')) {
         jQuery('.content, .sidebar').theiaStickySidebar({

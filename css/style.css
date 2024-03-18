@@ -317,6 +317,23 @@ main {
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--primary-color);
 }
+.blog-section,
+.tabs-section,
+.brand-section {
+    padding: 25px 0;
+}
+.tabs-section .nav-item button {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--black);
+}
+.tabs-section .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.nav-link:focus-visible {
+    box-shadow: none;
+}
 /*end main*/
 
 /*blog*/
