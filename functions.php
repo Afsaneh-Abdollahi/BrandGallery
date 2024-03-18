@@ -103,3 +103,48 @@ function webp_upload_mimes( $existing_mimes ) {
 }
 add_filter( 'mime_types', 'webp_upload_mimes' );
 ///
+
+
+//on sale
+add_action( 'woocommerce_sale_flash', 'bbloomer_show_sale_percentage_loop', 10 );
+function bbloomer_show_sale_percentage_loop() {
+    global $product;
+    if ( ! $product->is_on_sale() ) return;
+    if ( $product->is_type( 'simple' ) ) {
+        $max_percentage = ( ( $product->get_regular_price() - $product->get_sale_price() ) / $product->get_regular_price() ) * 100;
+    } elseif ( $product->is_type( 'variable' ) ) {
+        $max_percentage = 0;
+        foreach ( $product->get_children() as $child_id ) {
+            $variation = wc_get_product( $child_id );
+            $price = $variation->get_regular_price();
+            $sale = $variation->get_sale_price();
+            if ( $price != 0 && ! empty( $sale ) ) $percentage = ( $price - $sale ) / $price * 100;
+            if ( $percentage > $max_percentage ) {
+                $max_percentage = $percentage;
+            }
+        }
+    }
+    if ( $max_percentage > 0 )
+        return '<span class="onsale">'.round($max_percentage).'%</span>';
+}
+add_action( 'woocommerce_single_product_summary', 'simple_product_saving_percentage', 11 );
+function simple_product_saving_percentage() {
+    global $product;
+    if( $product->is_type('simple') && $product->is_on_sale() ) {
+        $regular_price = (float) wc_get_price_to_display( $product, array('price' => $product->get_regular_price() ) );
+        $active_price  = (float) wc_get_price_to_display( $product, array('price' => $product->get_sale_price() ) );
+        $saved_amount  = $regular_price - $active_price;
+        $percentage    = round( $saved_amount / $regular_price * 100 );
+        if ($product->is_in_stock()) {
+            echo '<p id="saving_total_price">'. __("تخفیف شما") .': '.$percentage.'% </p>';   } }
+}
+add_filter( 'woocommerce_available_variation', 'variable_product_saving_percentage', 10, 3 );
+function variable_product_saving_percentage( $data, $product, $variation ) {
+    if( $variation->is_on_sale() ) {
+        $saved_amount  = $data['display_regular_price'] - $data['display_price'];
+        $percentage    = round( $saved_amount / $data['display_regular_price'] * 100 );
+        if ($product->is_in_stock()) {
+            $data['price_html'] .= '<p id="saving_total_price">'. __("تخفیف شما") .': '.$percentage.'%</p>';  }  }
+    return $data;
+}
+////

@@ -61,14 +61,20 @@
                                     ?>
                                     <div class="swiper-slide">
                                         <a href="<?php the_permalink(); ?>">
-                                            <div class="tabs-item card">
-
+                                            <div class="tabs-item card product-item">
+                                                <?php
+                                                global $product;
+                                                if ($product->is_in_stock()) {
+                                                    if ($product->is_on_sale()) :
+                                                        echo apply_filters('woocommerce_sale_flash', '<span class="onsale">' . __('Sale!', 'woocommerce') . '</span>', $product);
+                                                    endif;
+                                                } ?>
                                                 <div class="img">
                                                     <img src="<?php the_post_thumbnail_url(); ?>"
                                                          alt="<?php the_title(); ?>" class="img-fluid card-img-top">
                                                 </div>
                                                 <div class="card-body">
-                                                    <h4 class="h6">
+                                                    <h4 class="h6 name">
                                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                     </h4>
                                                     <div class="product-price">
@@ -76,8 +82,6 @@
                                                             <?php global $product;
                                                             echo $product->get_price_html(); ?></p>
                                                     </div>
-                                                    <a href="<?php the_permalink(); ?>" class="product-buy">خرید
-                                                        آنلاین</a>
                                                 </div>
                                             </div>
                                         </a>
