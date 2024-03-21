@@ -90,19 +90,20 @@ header {
 }
 
 .logo {
-    float: right;
-    margin-top: 5px;
     width: 60px;
     height: auto;
     border-radius: 50%;
 }
-
+.toparea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .left-menu {
     margin: 6px 0 10px 3px;
     cursor: pointer;
     direction: ltr;
     color: #fff;
-    float: left;
 }
 
 .left-menu ul {
@@ -221,7 +222,10 @@ header {
 .left-icons {
     display: none;
 }
-
+div[id*='ajaxsearchlite'].wpdreams_asl_container{
+    width: 50% !important;
+    margin: 10px auto !important;
+}
 .user-menu-list {
     position: absolute;
     left: 0px;
