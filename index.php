@@ -7,8 +7,8 @@
       get_template_part('partials/index', "new");
       get_template_part('partials/index', "intro2");
       get_template_part('partials/index', "most-sales");
-      get_template_part('partials/index', "blog");
       get_template_part('partials/index', "brands");
+      get_template_part('partials/index', "blog");
       ?>
   </main>
 

@@ -1,12 +1,9 @@
 <div class="tabs-section">
     <div class="container-fluid">
-        <div class="row">
+            <div class="title">
+                <h3>ساعت مچی</h3>
+            </div>
             <ul class="nav nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li>
-                    <div class="title">
-                        <h3>ساعت مچی</h3>
-                    </div>
-                </li>
                 <?php
                 $count = 0;
                 $categories = get_categories(array(
@@ -102,6 +99,5 @@
                     <?php $count++;
                 } ?>
             </div>
-        </div>
     </div>
 </div>

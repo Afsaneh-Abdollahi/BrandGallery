@@ -2024,17 +2024,12 @@ div.product .product-single-content form.cart {
         font-size: 18px;
     }
 
-    .tabs-section ul li:first-child {
-        width: 100%;
-    }
-
-    .tabs-section ul {
-        justify-content: center;
-    }
-
     .card .card-img-top {
         max-height: 150px;
         min-height: 150px;
+    }
+    .tabs-section ul {
+        justify-content: center;
     }
 }
 
