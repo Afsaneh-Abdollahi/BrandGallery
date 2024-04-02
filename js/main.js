@@ -156,6 +156,32 @@ $(document).ready(function () {
         },
     });
 
+    var thumbSlider = new Swiper('.swiper-gallery', {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: false,
+        direction: 'horizontal',
+        navigation: {
+            nextEl: '',
+            prevEl: ''
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        scrollbar: {
+            el: '',
+            draggable: true,
+            hide: false,
+            snapOnRelease: true
+        },
+        mousewheel: false,
+        keyboard: false,
+        breakpoints: {}
+    });
+
+
     // load more items
     $(".blog .sec5 .tab-content .tab-pane.active .card").slice(0, 15).show();
     $(".blog .sec5 .tab-content .tab-pane.active #loadMore").on("click", function (e) {

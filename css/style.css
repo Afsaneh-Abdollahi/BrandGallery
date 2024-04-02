@@ -94,11 +94,13 @@ header {
     height: auto;
     border-radius: 50%;
 }
+
 .toparea {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .left-menu {
     margin: 6px 0 10px 3px;
     cursor: pointer;
@@ -222,10 +224,12 @@ header {
 .left-icons {
     display: none;
 }
-div[id*='ajaxsearchlite'].wpdreams_asl_container{
+
+div[id*='ajaxsearchlite'].wpdreams_asl_container {
     width: 50% !important;
     margin: 10px auto !important;
 }
+
 .user-menu-list {
     position: absolute;
     left: 0px;
@@ -1734,6 +1738,79 @@ footer .copyright .footer-social li:hover a {
 }
 
 /*end footer*/
+
+/*single product*/
+.product-single-section {
+    background-color: #f6f6f6 !important;
+}
+
+.woocommerce span.onsale {
+    background-color: var(--primary-color);
+}
+
+.woocommerce div.product .product_title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 62px;
+}
+
+.product-single-content .amount {
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.product-single-content del .amount {
+    color: var(--gray);
+}
+
+.product-single-content ins {
+    text-decoration: none;
+}
+
+.product-single-content ins .amount {
+    color: var(--primary-color);
+}
+
+.woocommerce div.product .product-single-content form.cart .button {
+background:  var(--primary-color);;
+}
+.woocommerce .product-single-content .quantity .qty{
+    width: 3.131em;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    line-height: 31px;
+}
+div.product .product-single-content form.cart {
+    float: left;
+    margin: 20px 0 40px;
+}
+
+.woocommerce-tabs,
+.product-tab-section {
+    margin: 30px 0;
+}
+
+.woocommerce-Tabs-panel h2 {
+    font-size: 2rem;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li,
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+    content: none;
+}
 
 /*----Media Query----*/
 
