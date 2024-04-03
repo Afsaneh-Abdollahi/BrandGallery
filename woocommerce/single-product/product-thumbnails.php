@@ -28,12 +28,6 @@ $attachment_ids = $product->get_gallery_image_ids();
 ?>
 <div class="row">
     <div class="thumb-slider">
-    <?php
-    if ($attachment_ids && $product->get_image_id()) {
-        foreach ($attachment_ids as $attachment_id) {
-            echo '<div><img src=' . wp_get_attachment_url($attachment_id) . ' class="img-fluid"></div>';
-        }
-    }
-    ?>
+      <div><img src='<?php echo get_the_post_thumbnail_url(); ?>' class="img-fluid"></div>'
     </div>
 </div>

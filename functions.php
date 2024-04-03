@@ -21,7 +21,8 @@ function wp_blank_setup()
     // woocommerce
     add_theme_support('woocommerce');
     add_theme_support('wc-product-gallery-slider');
-    add_theme_support('wc-product-gallery-slider-lightbox');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-lightbox');
     //post thumbnail
     add_theme_support('post-thumbnails');
     /**
@@ -182,4 +183,7 @@ function hb_attribute()
         }
     }
 }
+
+
+
 ////

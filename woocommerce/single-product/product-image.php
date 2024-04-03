@@ -21,26 +21,16 @@ global $product;
 $attachment_ids = $product->get_gallery_image_ids();
 ?>
 
-<div class="gallery-section hb-shadow swiper swiper-gallery">
 
-
+<div class="swiper-gallery">
     <div class="swiper-wrapper">
-        <?php
-        if ($attachment_ids && $product->get_image_id()) {
-            foreach ($attachment_ids as $attachment_id) {
-                echo '<div class="swiper-slide"><div class="img">' . wp_get_attachment_image($attachment_id, 'woocommerce_single') . '</div></div>';
-            }
-        } else {
-            $html = '<div class="woocommerce-product-gallery__image--placeholder">';
-            $html .= sprintf('<img src="%s" alt="%s" class="wp-post-image img-fluid"  />', esc_url(wc_placeholder_img_src('woocommerce_single')), esc_html__('Awaiting product image', 'woocommerce'));
-            $html .= '</div>';
-            echo $html;
-        }
-        ?>
+        <?php foreach ($attachment_ids as $attachment_id) : ?>
+            <div class="swiper-slide">
+                <?php echo wp_get_attachment_image($attachment_id, 'woocommerce_single', false, array('class' => 'img-fluid')); ?>
+            </div>
+        <?php endforeach; ?>
     </div>
     <div class="swiper-pagination"></div>
-
 </div>
-<?php
-//do_action('woocommerce_product_thumbnails');
-//?>
+
+

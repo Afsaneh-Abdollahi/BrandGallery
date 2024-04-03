@@ -1811,6 +1811,11 @@ div.product .product-single-content form.cart {
 .woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
     content: none;
 }
+ .gallery-section .thumb-section {
+    width: 100%;
+    float: right;
+    padding: 0 0 20px;
+}
 
 /*----Media Query----*/
 

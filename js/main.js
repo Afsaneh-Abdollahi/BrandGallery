@@ -156,32 +156,45 @@ $(document).ready(function () {
         },
     });
 
-    var thumbSlider = new Swiper('.swiper-gallery', {
-        slidesPerView: 3,
-        spaceBetween: 0,
+    var gallerySlider = new Swiper('.swiper-gallery', {
+        slidesPerView: 1,
+        spaceBetween: 10,
         loop: true,
         autoplay: false,
-        direction: 'horizontal',
         navigation: {
-            nextEl: '',
-            prevEl: ''
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         pagination: {
             el: '.swiper-pagination',
-            clickable: true
+            clickable: true,
         },
-        scrollbar: {
-            el: '',
-            draggable: true,
-            hide: false,
-            snapOnRelease: true
-        },
-        mousewheel: false,
-        keyboard: false,
-        breakpoints: {}
     });
 
+    // Thumbnails Swiper
+    var thumbSlider = new Swiper('.thumb-slider', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 3,
+            },
+        },
+    });
 
+    // Sync main slider with thumbnails
+    gallerySlider.controller.control = thumbSlider;
+    thumbSlider.controller.control = gallerySlider;
     // load more items
     $(".blog .sec5 .tab-content .tab-pane.active .card").slice(0, 15).show();
     $(".blog .sec5 .tab-content .tab-pane.active #loadMore").on("click", function (e) {
