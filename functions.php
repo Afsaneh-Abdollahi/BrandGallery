@@ -194,3 +194,54 @@ function wpb_move_comment_field_to_bottom($fields)
 
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
 ////
+
+// add to cart
+add_action('woocommerce_before_add_to_cart_form', 'before_add_to_cart');
+function before_add_to_cart()
+{
+    echo '<div class="add-section">';
+}
+
+add_action('woocommerce_after_add_to_cart_form', 'after_add_to_cart');
+function after_add_to_cart()
+{
+    echo '</div>';
+}
+
+// cart section
+add_action('woocommerce_before_cart_table', 'before_cart_table');
+function before_cart_table()
+{
+    echo '<div class="cart-section">';
+}
+
+add_action('woocommerce_after_cart_table', 'after_cart_table');
+function after_cart_table()
+{
+    echo '</div>';
+}
+
+add_action('woocommerce_before_cart_collaterals', 'before_cart_collaterals');
+function before_cart_collaterals()
+{
+    echo '<div class="cart-collaterals-section">';
+}
+
+add_action('woocommerce_after_cart_collaterals', 'after_cart_collaterals');
+function after_cart_collaterals()
+{
+    echo '</div>';
+}
+
+// cart section
+add_action('woocommerce_before_checkout_form', 'before_checkout_form');
+function before_checkout_form()
+{
+    echo '<div class="checkout-section">';
+}
+
+add_action('woocommerce_after_checkout_form', 'after_checkout_form');
+function after_checkout_form()
+{
+    echo '</div>';
+}

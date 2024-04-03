@@ -87,6 +87,7 @@ header {
     -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
     -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
     -o-box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+    position: relative;
 }
 
 .logo {
@@ -1642,6 +1643,62 @@ main {
 }
 
 /*end about us*/
+
+/*cart page*/
+
+.cart-section table.cart {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.cart-section table.cart thead {
+    background-color: #fcfcfc;
+}
+
+.cart-section table.cart thead th {
+    padding: 10px;
+}
+
+.cart-section table.cart tbody tr td {
+    padding: 10px;
+}
+
+.cart-section table.cart tbody tr td img {
+    width: 80px;
+    border-right: 5px;
+}
+
+.cart-section table.cart tbody tr td .remove {
+    line-height: 27px;
+    margin: 0 auto;
+}
+
+.cart-section table.cart tbody tr td button {
+    font-weight: normal;
+}
+
+.cart-section table.cart tbody tr td input {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 3px;
+}
+
+.cart-section table.cart tbody tr td.actions {
+    font-size: .95rem;
+}
+
+.cart-section table.cart tbody tr td.actions .input-text {
+    width: 100px;
+    padding: 5px;
+}
+
+.cart-section table.cart tbody tr td.product-name a,
+.cart-collaterals-section form a {
+    color: #0ba3a5 !important;
+}
+/*end cart page*/
 /*footer*/
 
 footer {
