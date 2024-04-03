@@ -26,7 +26,7 @@
         }
         ?>
 
-        <div <?php wc_product_class('swiper-slide', $product); ?>>
+        <div class="swiper-slide">
             <a href="<?php the_permalink(); ?>">
                 <div class="card product-item">
                     <?php

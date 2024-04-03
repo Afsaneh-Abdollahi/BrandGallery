@@ -24,9 +24,9 @@ if (empty($product) || !$product->is_visible()) {
     return;
 }
 ?>
-<div <?php wc_product_class('col-lg-3 col-md-4 col-sm-6 col-12', $product); ?>>
+<div class="swiper-slide">
     <a href="<?php the_permalink(); ?>">
-        <div class="crad product-item hb-shadow">
+        <div class="card product-item">
             <?php
             global $product;
             if ($product->is_in_stock()) {
@@ -39,22 +39,13 @@ if (empty($product) || !$product->is_visible()) {
                      alt="<?php the_title(); ?>" class="img-fluid">
             </div>
             <div class="card-body">
-                <h2 data-toggle="tooltip" title="<?php the_title(); ?>"><a
-                            href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <div class="product-text text-muted">
-                    <ul class="list-unstyled">
-                        <?php echo hb_attribute(); ?>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <h4 class="h6 name">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h4>
-                    <div class="product-price">
-                        <p class="price-section">
-                            <?php global $product;
-                            echo $product->get_price_html(); ?></p>
-                    </div>
+                <h4 class="h6 name">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h4>
+                <div class="product-price">
+                    <p class="price-section">
+                        <?php global $product;
+                        echo $product->get_price_html(); ?></p>
                 </div>
             </div>
         </div>
