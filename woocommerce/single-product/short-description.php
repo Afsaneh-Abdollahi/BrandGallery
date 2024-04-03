@@ -28,7 +28,7 @@ if (!$short_description) {
 }
 
 ?>
-<div class="excerpt-section text-justify">
+<div class="excerpt-section">
     <?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
 

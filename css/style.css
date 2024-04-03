@@ -1740,6 +1740,10 @@ footer .copyright .footer-social li:hover a {
 /*end footer*/
 
 /*single product*/
+.wcgs-carousel .swiper-pagination {
+    display: none !important;
+}
+
 .product-single-section {
     background-color: #f6f6f6 !important;
 }
@@ -1756,7 +1760,7 @@ footer .copyright .footer-social li:hover a {
 
 .product-single-content .amount {
     display: block;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 32px;
     font-weight: 600;
 }
@@ -1771,6 +1775,13 @@ footer .copyright .footer-social li:hover a {
 
 .product-single-content ins .amount {
     color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.product-single-content .excerpt-section,
+.woocommerce-Tabs-panel .desc-section {
+    font-size: 16px;
+    line-height: 36px;
 }
 
 .woocommerce div.product .product-single-content form.cart .button {
@@ -1796,9 +1807,10 @@ div.product .product-single-content form.cart {
 }
 
 .woocommerce-Tabs-panel h2,
-.woocommerce-Reviews-title.mb-3 {
+.comment_section .woocommerce-Reviews-title {
     font-size: 24px;
     font-weight: bold;
+    line-height: 36px;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
@@ -1827,11 +1839,106 @@ div.product .product-single-content form.cart {
     margin: 20px 0 25px;
 }
 
+.up-sells.upsells.products {
+    margin-bottom: 15px;
+}
+
 .woocommerce table.shop_attributes td {
     font-style: normal;
 }
 
 .woocommerce table.shop_attributes {
+    margin-top: 20px;
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    background-color: var(--primary-color);
+    float: left;
+    color: var(--white);
+    padding: 10px 35px;
+    width: 150px;
+    -webkit-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    -o-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.woocommerce-Reviews .number-section,
+.woocommerce-review__published-date {
+    float: left !important;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    opacity: 1;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+}
+
+.woocommerce #reviews #comments ol.commentlist {
+    padding-left: 0;
+}
+
+.woocommerce-review__author {
+    font-size: 14px;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text .description p {
+    padding-bottom: 10px;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+}
+
+.comment_section form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.comment_section form .comment-form-rating {
+    display: none;
+}
+
+.comment_section form .comment-form-author,
+.comment_section form .comment-form-email {
+    width: 50%;
+    float: right;
+}
+
+.comment_section form .comment-form-email {
+    padding-right: 5px;
+}
+
+.comment_section form .comment-form-comment {
+    clear: both;
+}
+
+.comment_section form input,
+.comment_section form textarea {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e2;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #030a16;
+    resize: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.comment_section form textarea {
+    height: 150px;
+}
+
+.comment_section #review_form {
     margin-top: 20px;
 }
 
@@ -1996,6 +2103,21 @@ div.product .product-single-content form.cart {
         text-align: center;
         margin: 10px 0;
     }
+
+    .woocommerce div.product .product_title {
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+    .product-single-content .excerpt-section,
+    .woocommerce-Tabs-panel .desc-section {
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    .up-sells.upsells.products h2, .related.products h2 {
+        font-size: 24px;
+    }
 }
 
 
@@ -2051,6 +2173,14 @@ div.product .product-single-content form.cart {
 
     .tabs-section ul {
         justify-content: center;
+    }
+
+    .product-single-content .amount {
+        font-size: 18px;
+    }
+
+    .woocommerce .woocommerce-breadcrumb {
+        padding-top: 25px;
     }
 }
 
