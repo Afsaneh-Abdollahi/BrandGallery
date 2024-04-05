@@ -1646,59 +1646,272 @@ main {
 
 /*cart page*/
 
-.cart-section table.cart {
-    width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, .1);
-}
-
-.cart-section table.cart thead {
-    background-color: #fcfcfc;
-}
-
-.cart-section table.cart thead th {
-    padding: 10px;
-}
-
-.cart-section table.cart tbody tr td {
-    padding: 10px;
-}
-
-.cart-section table.cart tbody tr td img {
-    width: 80px;
-    border-right: 5px;
-}
-
-.cart-section table.cart tbody tr td .remove {
-    line-height: 27px;
-    margin: 0 auto;
-}
-
-.cart-section table.cart tbody tr td button {
-    font-weight: normal;
-}
-
-.cart-section table.cart tbody tr td input {
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 3px;
-}
-
-.cart-section table.cart tbody tr td.actions {
-    font-size: .95rem;
-}
-
-.cart-section table.cart tbody tr td.actions .input-text {
-    width: 100px;
-    padding: 5px;
-}
-
-.cart-section table.cart tbody tr td.product-name a,
-.cart-collaterals-section form a {
-    color: #0ba3a5 !important;
-}
 /*end cart page*/
+
+/*account page*/
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 100%;
+}
+.account-nav-section {
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 20px 0 20px;
+    flex: none;
+}
+
+.account-nav-section nav ul li {
+    list-style-type: none;
+    line-height: 50px;
+    padding: 0 20px 0 50px;
+    cursor: pointer;
+}
+
+.account-nav-section nav ul li a:before {
+    font-weight: 900;
+    width: 10px;
+    margin-left: 10px;
+    margin-top: 2px;
+    height: 10px;
+    color: #616161;
+}
+
+.account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--dashboard a:before {
+    content: "\f007";
+    font-family: "Font Awesome 6 Free";
+}
+
+.account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--orders a:before {
+    content: "\f07a";
+    font-family: "Font Awesome 5 Free";
+}
+
+.account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--edit-address a:before {
+    content: "\f3c5";
+    font-family: "Font Awesome 5 Free";
+}
+
+.account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--edit-account a:before {
+    content: "\f05a";
+    font-family: "Font Awesome 5 Free";
+}
+
+.account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--customer-logout a:before {
+    content: "\f2f5";
+    font-family: "Font Awesome 5 Free";
+}
+
+.account-nav-section nav ul li a {
+    color: #616161;
+    width: 100%;
+    display: block;
+}
+
+.account-nav-section nav ul li:hover {
+    background-color: var(--primary-color-op) !important;
+}
+
+.account-nav-section nav ul li.is-active {
+    background-color: var(--primary-color-op) !important;
+}
+
+.account-nav-section nav ul li.is-active a,
+.account-nav-section nav ul li.is-active a:before {
+    color: var(--primary-color);;
+}
+
+.account-nav-section nav ul li:hover:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.web-myAccount-section .woocommerce-MyAccount-content {
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 20px 10px 20px 0;
+    width: 100%;
+    padding: 20px;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+}
+
+.web-myAccount-section .panel-section {
+    margin: 20px auto;
+}
+
+.web-myAccount-section .woocommerce {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.no-flex {
+    display: unset !important;
+    flex-wrap: unset !important;
+}
+
+.web-myAccount-section .woocommerce-error,
+.web-myAccount-section .woocommerce-info,
+.web-myAccount-section .woocommerce-message {
+    margin-top: 30px;
+}
+
+.account-orders-section table.my_account_orders thead tr th {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.account-orders-section table.my_account_orders tbody tr td .button {
+    float: none !important;
+    margin: 0 5px;
+}
+
+.account-orders-section table.my_account_orders tbody tr td {
+    text-align: center;
+    padding: 10px 0;
+    color: #616161;
+}
+
+.account-address-section h3 {
+    color: #616161;
+    font-size: 18px !important;
+}
+
+.account-address-section .col-1 {
+    width: 100% !important;
+}
+
+.woocommerce-ordering select {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.woocommerce-ordering {
+    width: 100%;
+    text-align: left;
+    float: unset !important;
+}
+
+.woocommerce .woocommerce-ordering,
+.woocommerce-page .woocommerce-ordering {
+    float: unset !important;
+    margin-bottom: 0 !important;
+}
+.woocommerce-Address-title {
+    background-color: transparent;
+    box-shadow: none;
+}
+.woocommerce-Address-title.title h3 {
+    color: #616161;
+    font-size: 18px !important;
+}
+.woocommerce-Address-title.title h3:before,
+.woocommerce-Address-title.title h3:after {
+    content: none;
+}
+.woocommerce-account .addresses .title .edit {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+/*end account page*/
+.comment_section form input,
+.comment_section form textarea,
+.panel-section form input[type=text],
+.panel-section form input[type=password],
+.panel-section form input[type=email],
+.lostPass-section form input[type=text],
+.account-address-section form input[type=text],
+.account-address-section form input[type=email],
+.account-address-section form input[type=tel],
+.account-edit-section form input[type=text],
+.account-edit-section form input[type=email],
+.account-edit-section form input[type=password],
+.single-blog-comment textarea,
+.single-blog-comment input[type=text],
+.checkout_coupon.woocommerce-form-coupon input[type=text],
+.digits_login_form input[type=text],
+.digits_login_form input[type=password] {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e2;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #030a16;
+    resize: none;
+    padding: 10px;
+    margin: 0;
+}
+.checkout-section .col2-set input,
+.checkout-section .col2-set textarea,
+.checkout-section .col2-set .select2,
+.cart-collaterals-section .woocommerce-shipping-calculator input,
+.cart-collaterals-section .woocommerce-shipping-calculator .select2,
+.account-address-section form .select2-container--default .select2-selection--single,
+.woocommerce-ordering select {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .1) !important;
+    padding: 8px 10px;
+    background-color: transparent;
+    height: 46px;
+}
+
+.checkout-section form button[type=submit],
+.pw-gateway-checkout-form input[type=submit],
+.cart-section .coupon button,
+.panel-section form button[type=submit],
+.cart-collaterals-section .cart-collaterals .button,
+.lostPass-section form button[type=submit],
+.account-orders-section table.my_account_orders tbody tr td .button,
+.woocommerce-info a,
+.account-address-section form button[type=submit],
+.account-edit-section form button[type=submit],
+button.woof_reset_search_form,
+.single-blog-comment .btn-submit-comment,
+.checkout_coupon.woocommerce-form-coupon button[type=submit],
+.return-to-shop a {
+    float: left;
+    font-weight: normal !important;
+    width: auto;
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    padding: 10px 15px;
+    font-family: hb-bold;
+    text-align: center;
+    color: #ffffff !important;
+    -webkit-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    -o-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.checkout-section form button[type=submit]:hover,
+.pw-gateway-checkout-form input[type=submit]:hover,
+.cart-section .coupon button:hover,
+.panel-section form button[type=submit]:hover,
+.cart-collaterals-section .cart-collaterals .button:hover,
+.lostPass-section form button[type=submit]:hover,
+.account-orders-section table.my_account_orders tbody tr td .button:hover,
+.woocommerce-info a:hover,
+.account-address-section form button[type=submit]:hover,
+.account-edit-section form button[type=submit]:hover,
+button.woof_reset_search_form:hover,
+.single-blog-comment .btn-submit-comment:hover,
+.checkout_coupon.woocommerce-form-coupon button[type=submit]:hover,
+.return-to-shop a:hover {
+    opacity: .9;
+    color: #ffffff;
+}
+.account-address-section .select2-selection__arrow {
+    left: 10px !important;
+    top: 10px !important;
+}
 /*footer*/
 
 footer {
