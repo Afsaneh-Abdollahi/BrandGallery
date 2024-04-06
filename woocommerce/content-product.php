@@ -26,7 +26,13 @@
         }
         ?>
 
-        <div class="swiper-slide">
+        <?php
+        if (is_product()) {
+            echo '<div class="swiper-slide">';
+        } else {
+            echo '<div class="col-lg-4 col-md-6 col-sm-6 col-12 ">';
+        }
+        ?>
             <a href="<?php the_permalink(); ?>">
                 <div class="card product-item">
                     <?php
