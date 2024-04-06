@@ -267,7 +267,7 @@ function after_lost_password_form()
 add_action('woocommerce_before_account_navigation', 'before_account_navigation');
 function before_account_navigation()
 {
-    echo '<div class="account-nav-section hb-shadow">';
+    echo '<div class="account-nav-section">';
 }
 
 add_action('woocommerce_after_account_navigation', 'after_account_navigation');

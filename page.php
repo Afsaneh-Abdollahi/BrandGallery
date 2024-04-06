@@ -6,7 +6,20 @@
  */
 get_header(); ?>
 
-<main>
+<div class="cover-section py-5 text-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="title">
+                    <h3><?php the_title(); ?></h3>
+                </div>
+                <?php woocommerce_breadcrumb(); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main style="background-color: #ffffff !important;" class="pt-0">
     <?php while (have_posts()) : the_post(); ?>
         <div class="container-fluid">
             <div class="row">
