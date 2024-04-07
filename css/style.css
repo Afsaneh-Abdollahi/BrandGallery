@@ -240,6 +240,18 @@ div.asl_w .probox .proinput input::placeholder {
     font-family: "dana", "Arial", sans-serif !important;
     float: right;
 }
+
+#ajaxsearchlite1 .probox .proinput input,
+div.asl_w .probox .proinput input{
+    text-align: right !important;
+    font-family: "dana", "Arial", sans-serif !important;
+
+}
+
+div.asl_r .results .item .asl_content h3, div.asl_r .results .item .asl_content h3 a{
+    font-family: "dana", "Arial", sans-serif !important;
+}
+
 .user-menu-list {
     position: absolute;
     left: 0px;
