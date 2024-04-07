@@ -231,13 +231,14 @@ div[id*='ajaxsearchlite'].asl_m {
     margin: 10px auto !important;
     background: #fff;
 }
-#ajaxsearchlite1 .probox, div.asl_w .probox{
-    background: #fff !important;
-    border: 1px solid #eee !important;
-    border-radius: 8px!important;
+#ajaxsearchlite1 .probox, div.asl_w .probox {
+    border: 2px solid #b5b5b5 !important;
+    border-radius: 10px!important;
 }
-div.asl_w .probox .promagnifier{
-    background: #c5c5c5 !important;
+#ajaxsearchlite1 .probox .proinput input::placeholder,
+div.asl_w .probox .proinput input::placeholder {
+    font-family: "dana", "Arial", sans-serif !important;
+    float: right;
 }
 .user-menu-list {
     position: absolute;
