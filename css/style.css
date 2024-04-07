@@ -2393,10 +2393,14 @@ footer .copyright .footer-social li:hover a {
     margin: 10px 0;
     font-weight: bold;
 }
+.notfound-price a {
+    text-decoration: underline;
+}
 .notfound-price a,
 .stock.out-of-stock {
     color: var(--primary-color) !important;
     font-weight: bold;
+
 }
 
 .stock.in-stock {
@@ -2418,6 +2422,10 @@ footer .copyright .footer-social li:hover a {
 div.product .product-single-content form.cart {
     float: left;
     margin: 20px 0 40px;
+}
+
+div.product .product-single-content .notfound-price a {
+   text-decoration: underline;
 }
 
 #saving_total_price {
