@@ -2343,6 +2343,15 @@ footer .copyright .footer-social li:hover a {
     margin: 10px 0;
     font-weight: bold;
 }
+.notfound-price a,
+.stock.out-of-stock {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+
+.stock.in-stock {
+    margin-top: 15px;
+}
 .woocommerce div.product .product-single-content form.cart .button {
     background: var(--primary-color);
 }

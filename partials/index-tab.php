@@ -77,7 +77,12 @@
                                                     <div class="product-price">
                                                         <p class="price-section">
                                                             <?php global $product;
-                                                            echo $product->get_price_html(); ?></p>
+                                                            if ($product->is_in_stock()) {
+                                                                echo $product->get_price_html();
+                                                            } else {
+                                                                echo '<span class="notfound-price"><a href="tel:02144245213">ناموجود</br>جهت استعلام تماس بگیرید</a></span>';
+                                                            }
+                                                            ?></p>
                                                     </div>
                                                 </div>
                                             </div>
