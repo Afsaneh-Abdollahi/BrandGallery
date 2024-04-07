@@ -20,8 +20,16 @@ if (!defined('ABSPATH')) {
 }
 
 get_header('shop'); ?>
-
-    <div class="product-single-section">
+    <div class="cover-section py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <?php woocommerce_breadcrumb(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-single-section" style="background-color: #ffffff !important;">
         <div class="container-fluid">
 
             <?php

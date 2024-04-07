@@ -136,24 +136,6 @@ function after_add_to_cart()
     echo '</div>';
 }
 
-// quantity
-add_action('woocommerce_before_add_to_cart_quantity', 'before_add_to_cart_quantity');
-function before_add_to_cart_quantity()
-{
-    echo '<div class="quantity-section">';
-}
-
-add_action('woocommerce_after_add_to_cart_quantity', 'after_add_to_cart_quantity');
-function after_add_to_cart_quantity()
-{
-    echo '</div>';
-}
-
-// // tag
-// add_filter('woocommerce_template_single_meta', 'woocommerce_change_meta_style' , 40);
-// function woocommerce_change_meta_style() {
-//     return '<div class="product_meta">';
-// }
 
 // variation
 add_action('woocommerce_before_variations_form', 'before_variations_form');
@@ -236,18 +218,6 @@ function after_checkout_form()
     echo '</div>';
 }
 
-//// panel section
-//add_action('woocommerce_before_customer_login_form', 'before_customer_panel');
-//function before_customer_panel()
-//{
-//    echo '<div class="panel-section">';
-//}
-//
-//add_action('woocommerce_after_customer_login_form', 'after_customer_panel');
-//function after_customer_panel()
-//{
-//    echo '</div>';
-//}
 
 //lost password
 add_action('woocommerce_before_lost_password_form', 'before_lost_password_form');
@@ -366,17 +336,6 @@ function wpb_move_comment_field_to_bottom($fields)
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
 
-// product sale
-
-//add_filter('woocommerce_sale_flash', 'woocommerce_change_sale_text', 10);
-//function woocommerce_change_sale_text($product)
-//{
-//    global $product;
-////    $percentage = round( ( ( $product->regular_price - $product->sale_price ) / $product->regular_price ) * 100 );
-////    return '<span class="onsale">'.$percentage.'%</span>';
-//    return '<span class="onsale">حراج</span>';
-//}
-
 add_action( 'woocommerce_sale_flash', 'bbloomer_show_sale_percentage_loop', 10 );
 function bbloomer_show_sale_percentage_loop() {
     global $product;
@@ -399,6 +358,7 @@ function bbloomer_show_sale_percentage_loop() {
         return '<span class="onsale">'.round($max_percentage).'%</span>';
 }
 add_action( 'woocommerce_single_product_summary', 'simple_product_saving_percentage', 11 );
+
 function simple_product_saving_percentage() {
     global $product;
     if( $product->is_type('simple') && $product->is_on_sale() ) {
@@ -410,6 +370,7 @@ function simple_product_saving_percentage() {
             echo '<p id="saving_total_price">'. __("تخفیف شما") .': '.$percentage.'% </p>';   } }
 }
 add_filter( 'woocommerce_available_variation', 'variable_product_saving_percentage', 10, 3 );
+
 function variable_product_saving_percentage( $data, $product, $variation ) {
     if( $variation->is_on_sale() ) {
         $saved_amount  = $data['display_regular_price'] - $data['display_price'];
@@ -418,6 +379,7 @@ function variable_product_saving_percentage( $data, $product, $variation ) {
             $data['price_html'] .= '<p id="saving_total_price">'. __("تخفیف شما") .': '.$percentage.'%</p>';  }  }
     return $data;
 }
+
 add_action( 'woocommerce_single_product_summary', 'dev_designs_show_sku', 5 );
 function dev_designs_show_sku(){
     global $product;
