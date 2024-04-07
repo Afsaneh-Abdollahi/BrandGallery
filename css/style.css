@@ -226,11 +226,16 @@ header {
     display: none;
 }
 
-div[id*='ajaxsearchlite'].wpdreams_asl_container {
+div[id*='ajaxsearchlite'].asl_m {
     width: 50% !important;
     margin: 10px auto !important;
+    background: #fff;
 }
-
+.probox{
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
 .user-menu-list {
     position: absolute;
     left: 0px;
@@ -2661,6 +2666,9 @@ div.product .product-single-content form.cart {
 }
 
 @media (max-width: 768px) {
+    div[id*='ajaxsearchlite'].asl_m {
+        width: 100% !important;
+    }
     .blog .sec1 h1 {
         font-size: 20px;
     }
