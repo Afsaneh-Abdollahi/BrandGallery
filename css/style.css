@@ -2600,7 +2600,12 @@ div.product .product-single-content .notfound-price a {
 .woof_products_top_panel {
     display: none !important;
 }
-
+.mobile{
+    display: none;
+}
+.desktop{
+    display: block;
+}
 /*----Media Query----*/
 
 
@@ -2699,8 +2704,32 @@ div.product .product-single-content .notfound-price a {
 }
 
 @media (max-width: 768px) {
+    .left-menu ul li:first-child{
+        border: none;
+    }
+    .left-menu ul li span.menu-item{
+        display: none;
+    }
+    .left-menu a svg{
+        top: -4px !important;
+        right: -7px !important;
+    }
+    #quadmenu{
+        margin-right: 0 !important;
+        box-shadow: none !important;
+    }
     div[id*='ajaxsearchlite'].asl_m {
         width: 100% !important;
+    }
+    .left-menu .cart-counter, .left-icons .cart-counter {
+        top: 1px;
+        right: 7px;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
     }
     .blog .sec1 h1 {
         font-size: 20px;

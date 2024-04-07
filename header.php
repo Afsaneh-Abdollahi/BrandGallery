@@ -26,39 +26,39 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
             <div class="col-lg-12 col-12 col">
 
                 <div class="toparea ">
-                    <a href="<?php echo home_url(); ?>" class="logo">
+                    <a href="<?php echo home_url(); ?>" class="logo desktop">
                         <img class="logo" src="<?php echo get_field('logo', 'option') ?>"
                              alt="logo">
                     </a>
                         <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container' => 'ul')) ?>
-                        <div class="left-icons">
-                        <a href="<?php bloginfo('url'); ?>/cart/">
-                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
 
-                            <span class="cart-counter"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-                        </a>
-                        <a href="<?php bloginfo('url'); ?>/my-account/">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                    <a href="<?php echo home_url(); ?>" class="logo mobile">
+                        <img class="logo" src="<?php echo get_field('logo', 'option') ?>"
+                             alt="logo">
+                    </a>
                     <div class="left-menu">
                         <ul>
                             <li>
                                 <?php if (is_user_logged_in()) : ?>
                                     <a class="header__details-user">
-                                        <?php
+                                       <span class="menu-item">
+                                            <?php
 
-                                        global $current_user;
-                                        echo $current_user->display_name
-                                        ?>
+                                            global $current_user;
+                                            echo $current_user->display_name
+                                            ?>
+                                       </span>
                                         <i class="fa fa-user" aria-hidden="true"></i>
 
                                     </a>
                                 <?php else : ?>
                                     <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
-                                        <?php
-                                        echo 'ورود | ثبت نام';
-                                        ?>
+                                        <span class="menu-item">
+                                            <?php
+                                            echo 'ورود | ثبت نام';
+                                            ?>
+                                        </span>
+
                                         <i class="fa fa-user" aria-hidden="true"></i>
 
                                     </a>
@@ -69,27 +69,20 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
                                     <div class="user-menu-list">
                                         <ul>
                                             <li>
-                                                <a href="" class="">
-                                                    <img src="" alt="">
-                                                    پیشخوان
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="">
+                                                <a href="<?php bloginfo('url'); ?>/cart/">
                                                     <img src="" alt="">
                                                     سفارشات
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href=""
+                                                <a href="<?php bloginfo('url'); ?>/my-account/"
                                                    class="color">
                                                     <img src="" alt="">
                                                     اطلاعات حساب کاربری
                                                 </a>
                                             </li>
                                             <li class="log-out">
-                                                <a href="">
+                                                <a href="<?php bloginfo('url'); ?>/log-out/">
                                                     <img src="" alt="">
                                                     خروج
                                                 </a>
@@ -102,7 +95,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
                             </li>
 
                             <li>
-                                <a href="<?php bloginfo('url'); ?>/cart/">سبد خرید <i class="fas fa-shopping-cart"
+                                <a href="<?php bloginfo('url'); ?>/cart/"><span class="menu-item">سبد خرید</span> <i class="fas fa-shopping-cart"
                                                                                       aria-hidden="true"></i>
                                 </a>
                                 <span class="cart-counter">
