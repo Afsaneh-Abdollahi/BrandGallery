@@ -1168,22 +1168,22 @@ main {
     color: rgba(0, 0, 0, 0.75);
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 16px !important;
 }
 
 .blog.single .blue_bg.posts p {
     width: 100%;
 }
 
+.blog.single .blue_bg svg,
 .blog.single .blue_bg i {
-    font-size: 32px;
+    font-size: 20px;
     margin-left: 16px;
-    color: #07282C;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .blog.single .blue_bg ul {
     margin-right: 50px;
-    margin-top: 32px;
+    margin-top: 32px !important;
 }
 
 .blog.single .blue_bg ul li {
@@ -2695,10 +2695,6 @@ div.product .product-single-content .notfound-price a {
     .blog .single_comment .comment-respond img {
         right: unset;
         left: 16px;
-    }
-
-    .blog.single .sidebar {
-        display: none;
     }
 
 }

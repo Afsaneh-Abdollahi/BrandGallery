@@ -75,33 +75,27 @@ $args = array(
                             </div>
                         </div>
 
-
                         <div class="blue_bg posts">
                             <div class="d-flex align-items-center">
-                                <i class="icon-file-text"></i>
-                                <p>حتما در <?php bloginfo('name'); ?> بخوانید:</p>
+                                <i class="fas fa-list-alt"></i>
+                                <p>چه نوع ساعتی میخوای؟</p>
                             </div>
+                            <ul>
                             <?php
-                            $post = get_post();
-                            $post_type = $post->post_type;
-                            $related = get_posts(
-                                array(
-                                    'post_type' => $post_type,
-                                    'category__in' => wp_get_post_categories($post->ID),
-                                    'numberposts' => 3,
-                                    'post__not_in' => array($post->ID)
-                                )
-                            );
-                            if ($related) {
-                                ?>
-                                <ul>
-                                    <?php foreach ($related as $post) { ?>
-                                        <li><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+                            $count = 0;
+                            $categories = get_categories(array(
+                                'post_type' => 'product',
+                                'taxonomy' => 'product_cat',
+                                'number' => 5,
+                                'hide_empty' => true,
+                            ));
+                            foreach ($categories as $cat) { ?>
+                                        <li><a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo  $cat->name; ?></a>
                                         </li>
                                     <?php }
                                     wp_reset_query(); ?>
-                                </ul>
-                            <?php } ?>
+                            </ul>
+
                         </div>
 
 
@@ -119,7 +113,7 @@ $args = array(
                             ?>
                             <div class="related_posts" id="related_posts">
                                 <div class="title">
-                                   <h3>مقالات مرتبط</h3>
+                                    <h3>مقالات مرتبط</h3>
                                 </div>
 
                                 <!-- Slider main container -->
@@ -201,54 +195,56 @@ $args = array(
                             </div>
                         <?php endif; ?>
 
-
                         <?php
-                        $post_type = $post->post_type;
-                        $related = get_posts(
-                            array(
-                                'post_type' => $post_type,
-                                'category__in' => wp_get_post_categories($post->ID),
-                                'numberposts' => 4,
-                                'post__not_in' => array($post->ID)
-                            )
-                        );
-                        if ($related) {
-                            ?>
-                            <div class="mb-5">
-                                <div class="title">مقالات مرتبط</div>
-                                <div class="row m-0">
-                                    <?php foreach ($related as $post) {
-                                        setup_postdata($post); ?>
-                                        <div class="col-lg-6 p-1">
-                                            <a href="<?php echo the_permalink(); ?>">
-                                                <div class="card related">
-                                                    <div class="img">
-                                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                                             class="card-img-top"
-                                                             alt="<?php echo the_title(); ?>">
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="name"><?php echo the_title(); ?></div>
-                                                        <ul>
-                                                            <li>
-                                                                <i class="fas fa-comments"></i><span><?php echo comments_number(); ?></span>
-                                                            </li>
-                                                            <li>
-                                                                <i class="fas fa-eye"></i><span><?php if (function_exists('the_views')) {
-                                                                        the_views();
-                                                                    } ?></span></li>
-                                                        </ul>
+                        // Replace 'relationship_field' with the name of your Relationship Field
+                        $related_products = get_field('related_products');
+
+                        if ($related_products) {
+                        ?>
+                        <div class="mb-5">
+                            <div class="title">محصولات مرتبط</div>
+                            <div class="row m-0">
+
+                                <?php
+                                foreach ($related_products as $product_item) {
+                                    $related_post = get_post($product_item);
+
+                                    if (!$related_post) {
+                                        // Skip this iteration if the related post is not found
+                                        continue;
+                                    }
+                                    ?>
+
+                                    <div class="col-lg-6 p-1">
+                                        <a href="<?php echo esc_url(get_permalink($product_item)); ?>">
+                                            <div class="tabs-item card product-item">
+                                                <div class="img">
+                                                    <?php echo get_the_post_thumbnail($product_item); ?>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="h6 name">
+                                                        <a href="<?php echo esc_url(get_permalink($product_item)); ?>"><?php echo esc_html($related_post->post_title); ?></a>
+                                                    </h4>
+                                                    <div class="product-price">
+                                                        <!--                                                    <p class="price-section">-->
+                                                        <!--                                                        -->
+                                                        <?php //global $product;
+                                                        //                                                        if ($product_item->is_in_stock()) {
+                                                        //                                                            echo $product_item->get_price_html();
+                                                        //                                                        } else {
+                                                        //                                                            echo '<span class="notfound-price"><a href="tel:02144245213">ناموجود</br>جهت استعلام تماس بگیرید</a></span>';
+                                                        //                                                        }
+                                                        //                                                        ?><!--</p>-->
                                                     </div>
                                                 </div>
-                                            </a>
-                                        </div>
-                                    <?php }
-                                    wp_reset_query(); ?>
-                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php }
+                                } ?>
+
                             </div>
-                        <?php } ?>
-
-
+                        </div>
 
                         <?php if (have_rows('social_media_repeater', 'option')) { ?>
                             <div class="mb-5">
