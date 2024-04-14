@@ -18,9 +18,7 @@ $args = array(
 <main class="main blog single">
     <div class="container-fluid">
         <div class="breadcrumb">
-            <?php
-            if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs();
-            ?>
+            <?php woocommerce_breadcrumb(); ?>
         </div>
 
         <div class="row">
@@ -81,19 +79,20 @@ $args = array(
                                 <p>چه نوع ساعتی میخوای؟</p>
                             </div>
                             <ul>
-                            <?php
-                            $count = 0;
-                            $categories = get_categories(array(
-                                'post_type' => 'product',
-                                'taxonomy' => 'product_cat',
-                                'number' => 5,
-                                'hide_empty' => true,
-                            ));
-                            foreach ($categories as $cat) { ?>
-                                        <li><a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo  $cat->name; ?></a>
-                                        </li>
-                                    <?php }
-                                    wp_reset_query(); ?>
+                                <?php
+                                $count = 0;
+                                $categories = get_categories(array(
+                                    'post_type' => 'product',
+                                    'taxonomy' => 'product_cat',
+                                    'number' => 5,
+                                    'hide_empty' => true,
+                                ));
+                                foreach ($categories as $cat) { ?>
+                                    <li>
+                                        <a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name; ?></a>
+                                    </li>
+                                <?php }
+                                wp_reset_query(); ?>
                             </ul>
 
                         </div>
@@ -196,9 +195,7 @@ $args = array(
                         <?php endif; ?>
 
                         <?php
-                        // Replace 'relationship_field' with the name of your Relationship Field
                         $related_products = get_field('related_products');
-
                         if ($related_products) {
                         ?>
                         <div class="mb-5">
@@ -208,11 +205,6 @@ $args = array(
                                 <?php
                                 foreach ($related_products as $product_item) {
                                     $related_post = get_post($product_item);
-
-                                    if (!$related_post) {
-                                        // Skip this iteration if the related post is not found
-                                        continue;
-                                    }
                                     ?>
 
                                     <div class="col-lg-6 p-1">
@@ -225,26 +217,14 @@ $args = array(
                                                     <h4 class="h6 name">
                                                         <a href="<?php echo esc_url(get_permalink($product_item)); ?>"><?php echo esc_html($related_post->post_title); ?></a>
                                                     </h4>
-                                                    <div class="product-price">
-                                                        <!--                                                    <p class="price-section">-->
-                                                        <!--                                                        -->
-                                                        <?php //global $product;
-                                                        //                                                        if ($product_item->is_in_stock()) {
-                                                        //                                                            echo $product_item->get_price_html();
-                                                        //                                                        } else {
-                                                        //                                                            echo '<span class="notfound-price"><a href="tel:02144245213">ناموجود</br>جهت استعلام تماس بگیرید</a></span>';
-                                                        //                                                        }
-                                                        //                                                        ?><!--</p>-->
-                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-                                <?php }
-                                } ?>
-
+                                <?php } ?>
                             </div>
                         </div>
+                        <?php } ?>
 
                         <?php if (have_rows('social_media_repeater', 'option')) { ?>
                             <div class="mb-5">

@@ -209,6 +209,7 @@ $(document).ready(function () {
     });
     $('.tabs-section .swiper_tab .card').matchHeight();
     $('.search_page .card').matchHeight();
+    $('.archive .card').matchHeight();
 
 
 

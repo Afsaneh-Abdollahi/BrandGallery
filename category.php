@@ -3,9 +3,7 @@
 <main class="blog main category_page">
     <div class="container-fluid">
         <div class="breadcrumb">
-            <?php
-            if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs();
-            ?>
+            <?php woocommerce_breadcrumb(); ?>
         </div>
 
         <?php

@@ -268,8 +268,10 @@ div.asl_r .results .item .asl_content h3, div.asl_r .results .item .asl_content 
     opacity: 0;
     visibility: hidden;
     z-index: 3;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    --bs-border-radius: 8px;
+    -webkit-border-radius: 8px;
 }
 
 
@@ -295,8 +297,21 @@ div.asl_r .results .item .asl_content h3, div.asl_r .results .item .asl_content 
     padding-right: 10px;
     border: none !important;
 }
-
-
+.user-menu-list ul li:hover {
+    border-radius: 0;
+}
+.user-menu-list ul li:hover:first-child {
+    border-top-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+.user-menu-list ul li:hover:last-child {
+    border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+}
 .user-menu-list a,
 .left-menu ul li .color {
     display: -webkit-box;
@@ -1738,7 +1753,39 @@ main {
     color: var(--primary-color);
     font-weight: bold;
 }
+.web-cart-section ul.order_details {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px !important;
+}
 
+.web-cart-section ul.order_details li {
+    float: none !important;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    line-height: 24px !important;
+    list-style-type: none;
+    text-align: center;
+    margin: 0 !important;
+    padding: 16px 0 !important;
+    border-left: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    display: table-cell;
+}
+
+.web-cart-section .order_details li:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, .1) !important;
+}
+
+.web-cart-section .woocommerce-thankyou-order-received {
+    color: #459647;
+    text-align: center;
+    font-weight: bold;
+}
+
+.web-cart-section h2 {
+    font-size: 22px;
+}
 .cart-collaterals-section .cart-collaterals .cross-sells h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -2212,7 +2259,9 @@ button.woof_reset_search_form:hover,
     left: 10px !important;
     top: 10px !important;
 }
-
+.woocommerce-breadcrumb a {
+    color: #767676;
+}
 /*footer*/
 
 footer {
@@ -2504,6 +2553,9 @@ div.product .product-single-content .notfound-price a {
 
 .woocommerce table.shop_attributes {
     margin-top: 20px;
+}
+.woocommerce table.shop_table td a {
+    color: var(--primary-color);
 }
 
 .woocommerce #review_form #respond .form-submit input {
