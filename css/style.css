@@ -2262,6 +2262,95 @@ button.woof_reset_search_form:hover,
 .woocommerce-breadcrumb a {
     color: #767676;
 }
+
+/*404*/
+
+.page404 .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000;
+    animation: colorSlide 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+.page404 .flex-container .text-center {
+    text-align: center;
+}
+.page404 .flex-container .text-center h1, .page404 .flex-container .text-center h3 {
+    margin: 10px;
+    cursor: default;
+    color: #000000;
+}
+.page404 .flex-container .text-center h1 .fade-in, .page404 .flex-container .text-center h3 .fade-in {
+    animation: fadeIn 2s ease infinite;
+}
+.page404 .flex-container .text-center h1 {
+    font-size: 8em;
+    transition: font-size 200ms ease-in-out;
+    border-bottom: 1px dashed #000000;
+}
+.page404 .flex-container .text-center h1 span#digit1 {
+    animation-delay: 200ms;
+    color: #000000;
+}
+.page404 .flex-container .text-center h1 span#digit2 {
+    animation-delay: 300ms;
+    color: #000000;
+}
+.page404 .flex-container .text-center h1 span#digit3 {
+    animation-delay: 400ms;
+    color: #000000;
+}
+.page404 .flex-container .text-center a {
+    border: 1px solid #000000;
+    background: transparent;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    transition: background-color 200ms ease-in;
+    margin: 20px 0;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    --bs-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.page404 .flex-container .text-center button:hover {
+    background-color: white;
+    color: #555;
+    cursor: pointer;
+}
+@keyframes colorSlide {
+    0% {
+        background-color: var(--secondary-color);
+    }
+    25% {
+        background-color: #e7ac5d;
+    }
+    50% {
+        background-color: #f3c58a;
+    }
+    75% {
+        background-color: #fadeba;
+    }
+    100% {
+        background-color: #f8dcb8;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*end 404*/
+
 /*footer*/
 
 footer {

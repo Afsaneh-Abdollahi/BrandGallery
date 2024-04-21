@@ -1,15 +1,21 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: 404
+ */
+get_header(); ?>
 
-<main role="main" aria-label="Content">
-  <section>
-    <article id="post-404">
-      <h1><?php esc_html_e('Page not found', 'wp-blank'); ?></h1>
-      <h2>
-        <a href="<?php echo esc_url(home_url()); ?>"><?php esc_html_e('Return home?', 'wp-blank'); ?></a>
-      </h2>
-    </article>
-  </section>
+<main class="page404">
+    <div class="flex-container">
+        <div class="text-center">
+            <h1>
+                <span class="fade-in" id="digit1">4</span>
+                <span class="fade-in" id="digit2">0</span>
+                <span class="fade-in" id="digit3">4</span>
+            </h1>
+            <h3 class="fadeIn">صفحه ای یافت نشد</h3>
+            <a href="<?php echo esc_url(home_url()); ?>" type="button" name="button">بازگشت به خانه</a>
+        </div>
+    </div>
 </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
