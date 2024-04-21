@@ -20,6 +20,7 @@ $custom_logo_id = get_theme_mod('fe');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?> >
 
+<?php if (!is_404()) { ?>
 <header class="main-header">
     <div class="container-fluid">
         <div class="row">
@@ -121,5 +122,5 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
     </div>
 </header>
 
-
+<?php } ?>
 
