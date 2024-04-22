@@ -1081,6 +1081,89 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => 1,
         'description' => '',
     ));
+
+    acf_add_local_field_group(array(
+        'key' => 'group_6626626375f52',
+        'title' => 'سوالات متداول',
+        'fields' => array(
+            array(
+                'key' => 'field_6626626dc5e27',
+                'label' => 'سوالات متداول',
+                'name' => 'faq',
+                'type' => 'repeater',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'collapsed' => '',
+                'min' => 0,
+                'max' => 0,
+                'layout' => 'table',
+                'button_label' => '',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_66266282c5e28',
+                        'label' => 'پرسش',
+                        'name' => 'question',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_6626628bc5e29',
+                        'label' => 'پاسخ',
+                        'name' => 'answer',
+                        'type' => 'textarea',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'maxlength' => '',
+                        'rows' => '',
+                        'new_lines' => '',
+                    ),
+                ),
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'faq.php',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
 endif;
 
 if( function_exists('acf_add_local_field_group') ):

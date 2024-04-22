@@ -10,12 +10,10 @@ get_header(); ?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="col-lg-12">
-                        <div class="banner-about ">
-                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                            <div class="banner-about-color">
-                                <h1>درباره ما</h1>
-                            </div>
+                    <div class="banner-about ">
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                        <div class="banner-about-color">
+                            <h1>درباره ما</h1>
                         </div>
                     </div>
                 </div>
