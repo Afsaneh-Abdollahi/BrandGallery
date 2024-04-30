@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 
-<main class="page404">
+<main class="page404 p-0">
     <div class="flex-container">
         <div class="text-center">
             <h1>
