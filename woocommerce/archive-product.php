@@ -29,8 +29,12 @@ do_action( 'woocommerce_before_main_content' );
     <div class="archive">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                    <?php dynamic_sidebar('shop'); ?>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-5 mt-md-0">
+                    <?php
+                     echo do_shortcode('[woof_front_builder name="filter 2"]');
+                     echo do_shortcode('[woof_mobile name="filter 2"]');
+
+                    dynamic_sidebar('shop'); ?>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-12">
 

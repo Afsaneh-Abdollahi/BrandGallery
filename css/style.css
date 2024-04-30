@@ -2406,6 +2406,83 @@ button.woof_reset_search_form:hover,
 
 /*end coming soon*/
 
+/*woof*/
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content,
+.woocommerce .widget_price_filter .price_slider_amount {
+    width: 100%;
+}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+    background-color: var(--primary-color);
+}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+    border: 1px solid var(--black);
+}
+a.woof_front_toggle {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+.woof-front-builder-container .woof_container h4 {
+    border-radius: 4px;
+}
+.woof_sid_flat_white {
+    border-radius: 8px;
+}
+.woof_show_mobile_filter img,
+.woof_hide_mobile_filter img {
+    width: 18px;
+}
+.woof_hide_mobile_filter span, .woof_show_mobile_filter span {
+    font-size: 14px;
+}
+.woof_show_mobile_filter {
+    margin: 20px 0;
+}
+.woof_price_search_container .price_slider_amount .price_label {
+    display: block;
+    text-align: center !important;
+    float: unset !important;
+}
+.woocommerce .widget_price_filter .price_slider_amount .button {
+    width: 100%;
+}
+
+.woof_container_checkbox input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    position: relative;
+}
+
+.woof_container_checkbox input[type=checkbox]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.woof_container_checkbox input[type=checkbox]:disabled {
+
+}
+.woof_container_checkbox input[type=checkbox]:checked:before {
+    content: "\f00c";
+    position: absolute;
+    left: 1px;
+    top: -2px;
+    color: #ffffff;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.woof_container_checkbox input[type=checkbox]:checked label {
+    color: var(--primary-color) !important;
+}
+/*end woof*/
+
 /*footer*/
 
 footer {
