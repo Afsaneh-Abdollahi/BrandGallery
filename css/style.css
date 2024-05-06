@@ -1958,7 +1958,9 @@ main {
     color: #616161;
     font-size: 18px !important;
 }
-
+.account-address-section button[type=submit] {
+    margin-top: 16px;
+}
 .account-address-section .col-1 {
     width: 100% !important;
 }
@@ -1995,7 +1997,7 @@ main {
     content: none;
 }
 
-.woocommerce-account .addresses .title .edit {
+.woocommerce-Address-title.title a {
     float: none;
     display: block;
     width: 100%;
@@ -2159,7 +2161,7 @@ main {
 .woocommerce-info::before,
 .woocommerce-message::before {
     top: 0.9rem;
-    right: 1.5rem;
+    right: 0.5rem;
 }
 
 .woocommerce-error li,
