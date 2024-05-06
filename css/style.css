@@ -2186,7 +2186,9 @@ main {
 .single-blog-comment input[type=text],
 .checkout_coupon.woocommerce-form-coupon input[type=text],
 .digits_login_form input[type=text],
-.digits_login_form input[type=password] {
+.digits_login_form input[type=password],
+.state_select,
+.country_to_state.country_select {
     width: 100%;
     border-radius: 10px;
     background-color: #fff;
