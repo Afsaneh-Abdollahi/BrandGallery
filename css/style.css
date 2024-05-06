@@ -1844,37 +1844,35 @@ main {
 }
 
 .account-nav-section nav ul li a:before {
-    font-weight: 900;
-    width: 10px;
     margin-left: 10px;
     margin-top: 2px;
-    height: 10px;
     color: #616161;
+    width: 14px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    opacity: 0.6;
 }
 
 .account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--dashboard a:before {
-    content: "\f007";
-    font-family: "Font Awesome 5 Brands";
+    content: url('../img/user-solid.svg');
 }
 
 .account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--orders a:before {
-    content: "\f07a";
-    font-family: FontAwesome;
+    content: url('../img/shopping-cart-solid.svg');
 }
 
 .account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--edit-address a:before {
-    content: "\f3c5";
-    font-family: FontAwesome;
+    content: url('../img/map-marker-alt-solid.svg');
 }
 
 .account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--edit-account a:before {
-    content: "\f05a";
-    font-family: FontAwesome;
+    content: url('../img/circle-info-solid.svg');
 }
 
 .account-nav-section nav ul li.woocommerce-MyAccount-navigation-link--customer-logout a:before {
-    content: "\f2f5";
-    font-family: FontAwesome;
+    content: url('../img/sign-out-alt-solid.svg');
 }
 
 .account-nav-section nav ul li a {
@@ -1891,9 +1889,8 @@ main {
     background-color: var(--primary-color-op) !important;
 }
 
-.account-nav-section nav ul li.is-active a,
-.account-nav-section nav ul li.is-active a:before {
-    color: var(--primary-color);;
+.account-nav-section nav ul li.is-active a{
+    color: var(--primary-color);
 }
 
 .account-nav-section nav ul li:hover:first-child {
@@ -1958,9 +1955,11 @@ main {
     color: #616161;
     font-size: 18px !important;
 }
+
 .account-address-section button[type=submit] {
     margin-top: 16px;
 }
+
 .account-address-section .col-1 {
     width: 100% !important;
 }
@@ -2188,7 +2187,9 @@ main {
 .single-blog-comment input[type=text],
 .checkout_coupon.woocommerce-form-coupon input[type=text],
 .digits_login_form input[type=text],
-.digits_login_form input[type=password] {
+.digits_login_form input[type=password],
+.state_select,
+.country_to_state.country_select {
     width: 100%;
     border-radius: 10px;
     background-color: #fff;
@@ -3194,10 +3195,13 @@ p {
     }
 
     .checkout-section .col2-set .col-1 .form-row,
-    .checkout-section .col2-set .col-2 .form-row {
-        width: 100%;
+    .checkout-section .col2-set .col-2 .form-row,
+    .checkout-section form #billing_state_field,
+    .checkout-section form #billing_city_field {
+        width: 100% !important;
         display: block;
     }
+
     .web-cart-section ul.order_details,
     .web-cart-section ul.order_details li {
         display: block;
@@ -3321,8 +3325,3 @@ p {
         font-size: 16px;
     }
 }
-
-
-
-
-
