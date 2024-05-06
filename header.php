@@ -20,7 +20,7 @@ $custom_logo_id = get_theme_mod('fe');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?> >
 
-<?php if (!is_page_template('404.php') && !is_page_template('comingsoon.php')) { ?>
+<?php if (!is_404() || !is_page_template('comingsoon.php')) { ?>
 <header class="main-header">
     <div class="container-fluid">
         <div class="row">

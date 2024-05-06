@@ -3198,6 +3198,10 @@ p {
         width: 100%;
         display: block;
     }
+    .web-cart-section ul.order_details,
+    .web-cart-section ul.order_details li {
+        display: block;
+    }
 }
 
 

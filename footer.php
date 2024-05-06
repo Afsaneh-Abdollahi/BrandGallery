@@ -7,7 +7,7 @@
 <!-- footer -->
 
 <footer class="footer">
-    <?php if (!is_page_template('404.php') && !is_page_template('comingsoon.php')) { ?>
+    <?php if (!is_404() && !is_page_template('comingsoon.php')) { ?>
     <div class="container-fluid">
 
         <?php if (have_rows('services_repeater', 'option')): ?>
