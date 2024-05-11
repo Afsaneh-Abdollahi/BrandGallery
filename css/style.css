@@ -2484,6 +2484,9 @@ a.woof_front_toggle {
 .woof_container_checkbox input[type=checkbox]:checked label {
     color: var(--primary-color) !important;
 }
+.woof_checkbox_count {
+    color: var(--primary-color);
+}
 /*end woof*/
 
 /*footer*/
@@ -3205,6 +3208,14 @@ p {
     .web-cart-section ul.order_details,
     .web-cart-section ul.order_details li {
         display: block;
+    }
+
+    .web-myAccount-section .woocommerce-MyAccount-content {
+        margin: 20px 0;
+        padding-bottom: 70px;
+    }
+    .account-edit-section form button[type=submit] {
+        margin-top: 16px;
     }
 }
 
