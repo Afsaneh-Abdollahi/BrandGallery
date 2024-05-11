@@ -2422,11 +2422,14 @@ button.woof_reset_search_form:hover,
     border: 1px solid var(--black);
 }
 a.woof_front_toggle {
-    font-size: 22px;
+    font-size: 26px;
     color: var(--primary-color);
+    line-height: 24px;
+    float: left;
 }
 .woof-front-builder-container .woof_container h4 {
     border-radius: 4px;
+    text-align: right !important;
 }
 .woof_sid_flat_white {
     border-radius: 8px;
@@ -2449,7 +2452,7 @@ a.woof_front_toggle {
 .woocommerce .widget_price_filter .price_slider_amount .button {
     width: 100%;
 }
-
+.woof_container_inner input[type=checkbox],
 .woof_container_checkbox input[type=checkbox] {
     width: 15px;
     height: 15px;
@@ -2462,30 +2465,35 @@ a.woof_front_toggle {
     vertical-align: middle;
     position: relative;
 }
-
+.woof_container_inner input[type=checkbox]:checked,
 .woof_container_checkbox input[type=checkbox]:checked {
-    background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
-.woof_container_checkbox input[type=checkbox]:disabled {
-
-}
+.woof_container_inner input[type=checkbox]:checked:before,
 .woof_container_checkbox input[type=checkbox]:checked:before {
-    content: "\f00c";
+    content: "";
+    background-image: url(../img/checked.webp);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 14px;
     position: absolute;
-    left: 1px;
-    top: -2px;
-    color: #ffffff;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
 }
 
 .woof_container_checkbox input[type=checkbox]:checked label {
     color: var(--primary-color) !important;
 }
+
+.woof_container_inner label span,
 .woof_checkbox_count {
     color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+.woof_container_inner,
+ul.woof_list li {
+    position: relative;
 }
 /*end woof*/
 
