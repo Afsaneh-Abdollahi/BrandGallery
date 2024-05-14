@@ -1656,7 +1656,16 @@ main {
 .about {
     padding: 50px 0;
 }
-
+.about iframe {
+    width: 100%;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    -o-box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+    box-shadow: -1px 2px 3px rgba(0, 0, 0, .2);
+}
 .banner-about {
     position: relative;
     height: 260px;
@@ -2531,7 +2540,9 @@ ul.woof_list li {
 /*end woof*/
 
 /*footer*/
-
+.main_footer {
+    margin-bottom: 35px;
+}
 footer {
     background-color: #fefefe;
     position: relative;

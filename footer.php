@@ -30,6 +30,27 @@
         <?php endif; ?>
 
         <div class="main_footer">
+            <?php
+            if (have_rows('contact_us_repeater', 'option')) { ?>
+                <div class="row pt-5 pb-4 border-bottom">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 footer-contact-us">
+                        <h4>تماس با ما</h4>
+                        <ul>
+                            <?php while (have_rows('contact_us_repeater', 'option')) : the_row(); ?>
+                                <li><i class="fas <?php echo  get_sub_field('icon'); ?>"></i> <?php echo get_sub_field('title'); ?> :
+                                    <span><?php echo get_sub_field('value'); ?></span>
+                                </li>
+                            <?php endwhile;
+                            wp_reset_query(); ?>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 namad text-center">
+                        <a href="#">
+                            <img src="<?php echo PATH?>/img/enamad.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            <?php } ?>
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12 mb-1 d-flex">
                     <div class="menu">
@@ -116,27 +137,6 @@
                     </div>
                 </div>
             </div>
-            <?php
-            if (have_rows('contact_us_repeater', 'option')) { ?>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 footer-contact-us">
-                        <h4>تماس با ما</h4>
-                        <ul>
-                            <?php while (have_rows('contact_us_repeater', 'option')) : the_row(); ?>
-                                <li><i class="fas <?php echo  get_sub_field('icon'); ?>"></i> <?php echo get_sub_field('title'); ?> :
-                                    <span><?php echo get_sub_field('value'); ?></span>
-                                </li>
-                            <?php endwhile;
-                            wp_reset_query(); ?>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 namad">
-                        <a href="#">
-                            <img src="<?php echo PATH?>/img/enamad.png" alt="">
-                        </a>
-                    </div>
-                </div>
-            <?php } ?>
         </div>
 
     </div>
