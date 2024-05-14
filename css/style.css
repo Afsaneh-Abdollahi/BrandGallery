@@ -357,6 +357,9 @@ main {
     background-color: #f6f6f6 !important;
     padding-top: 50px;
 }
+.swiper_brands{
+    margin: 20px 0;
+}
 
 .swiper_brands .card img {
     max-width: 100px;
@@ -673,7 +676,7 @@ main {
     color: var(--primary-color);
 }
 
-.blog .swiper {
+.swiper {
     overflow-x: hidden;
     -ms-overflow-x: hidden;
     padding: 20px 10px;
@@ -681,12 +684,12 @@ main {
     margin: 0px -10px;
 }
 
-.blog .swiper-button-disabled {
+.swiper-button-disabled {
     display: none;
 }
 
-.blog .swiper-button-prev,
-.blog .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.20));
     -ms-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.20));
     -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.20));
@@ -696,18 +699,18 @@ main {
     height: 40px;
 }
 
-.blog .swiper-button-prev {
+.swiper-button-prev {
     right: 0 !important;
     left: unset !important;
 }
 
-.blog .swiper-button-next {
+.swiper-button-next {
     left: 0 !important;
     right: unset !important;
 }
 
-.blog .swiper-button-prev:after,
-.blog .swiper-button-next:after {
+.swiper-button-prev:after,
+.swiper-button-next:after {
     font-size: 12px;
     color: #868686;
     font-weight: bold;
@@ -3277,7 +3280,7 @@ p {
         font-size: 16px;
     }
 
-    .blog .swiper_posts .swiper-button-prev, .blog .swiper_posts .swiper-button-next {
+    .swiper_posts .swiper-button-prev,.swiper_posts .swiper-button-next {
         display: none;
     }
 
