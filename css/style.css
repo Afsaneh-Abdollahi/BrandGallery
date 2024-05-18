@@ -1572,8 +1572,8 @@ main {
     --bs-border-radius: 50px;
     -webkit-border-radius: 50px;
     box-shadow: -1px 2px 6px 0px rgba(0, 0, 0, 0.25);
-    height: 60px;
-    line-height: 60px;
+    height: 40px;
+    line-height: 40px;
     z-index: 2;
     min-width: 140px;
     font-size: 20px;
