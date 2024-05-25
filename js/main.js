@@ -134,6 +134,41 @@ $(document).ready(function () {
         },
 
     });
+    const slider = new Swiper('.swiper_slider', {
+        // Optional parameters
+        spaceBetween: 5,
+        slidesPerView: 1,
+        direction: 'horizontal',
+        loop: false,
+        autoplay: {
+            delay: 5000,
+        },
+        // responsive
+        breakpoints: {
+            992: {
+                spaceBetween: 50,
+                slidesPerView: 1,
+            }
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+
+    });
 
     var swiper_intro2 = new Swiper(".swiper-intro2", {
         effect: "coverflow",
