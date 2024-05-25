@@ -1212,3 +1212,56 @@ if( function_exists('acf_add_local_field_group') ):
     ));
 
 endif;
+
+if( function_exists('acf_add_local_field_group') ):
+
+    acf_add_local_field_group(array(
+        'key' => 'group_6613a5ceeb53e',
+        'title' => 'محصولات مرتبط',
+        'fields' => array(
+            array(
+                'key' => 'field_6613a5d6f45c0',
+                'label' => 'افزودن محصولات مرتبط',
+                'name' => 'related_products',
+                'type' => 'relationship',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'product',
+                ),
+                'taxonomy' => '',
+                'filters' => array(
+                    0 => 'search',
+                ),
+                'elements' => '',
+                'min' => '',
+                'max' => '',
+                'return_format' => 'id',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+
+endif;

@@ -278,8 +278,8 @@ $args = array(
                     <?php echo do_shortcode($newsletter_setting['shortcode']) ?>
 
                 </div>
-                <img src="<?php echo $newsletter_setting['left_img'] ?>"
-                     alt="<?php echo $newsletter_setting['title'] ?>" class="img-fluid">
+<!--                <img src="--><?php //echo $newsletter_setting['left_img'] ?><!--"-->
+<!--                     alt="--><?php //echo $newsletter_setting['title'] ?><!--" class="img-fluid">-->
             </div>
         </section>
 

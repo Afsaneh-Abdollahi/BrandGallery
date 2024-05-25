@@ -167,8 +167,8 @@ get_header(); ?>
                     <?php echo do_shortcode($newsletter_setting['shortcode']) ?>
 
                 </div>
-                <img class="img-fluid" src="<?php echo $newsletter_setting['left_img'] ?>"
-                     alt="<?php echo $newsletter_setting['title'] ?>" class="img-fluid">
+<!--                <img class="img-fluid" src="--><?php //echo $newsletter_setting['left_img'] ?><!--"-->
+<!--                     alt="--><?php //echo $newsletter_setting['title'] ?><!--" class="img-fluid">-->
             </div>
         </section>
 
