@@ -1,30 +1,29 @@
 <div class="intro-section-two">
     <div class="container-fluid">
         <div class="title text-center">
-            <h3>محصولات جانبی</h3>
+            <h3>برندهای منتخب</h3>
         </div>
         <?php
-        $categories = get_categories(array(
+        $brands = get_terms([
             'post_type' => 'product',
-            'taxonomy' => 'product_cat',
-            'number' => 5,
+            'taxonomy' => 'brands',
             'hide_empty' => false,
-        ));
-        if ($categories) { ?>
+        ]);
+        if ($brands) {
+            ?>
             <div class="swiper swiper-intro2">
                 <div class="swiper-wrapper">
                     <?php
-                    foreach ($categories as $cat) {
-                        $is_show = get_field('is-show', $cat);
-                        $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
-                        $image = wp_get_attachment_url( $thumbnail_id );
+                    foreach ($brands as $brand) {
+                        $brand_image = get_field('brand_slider_img', $brand);
+                        $is_show = get_field('is_show_in_brands_slider', $brand);
                         if ($is_show === true) {
                             ?>
                             <div class="swiper-slide">
-                                <a href="<?php echo get_term_link($cat); ?>">
+                                <a href="<?php echo get_term_link($brand); ?>">
                                     <div class="img">
-                                        <div class="cover"><h4><?php echo $cat->name; ?></h4></div>
-                                        <img src="<?php echo $image; ?>" alt="<?php echo $cat->name; ?>">
+                                        <div class="cover"><h4><?php echo $brand->name; ?></h4></div>
+                                        <img src="<?php echo $brand_image; ?>" alt="<?php echo $brand->name; ?>">
                                     </div>
                                 </a>
                             </div>
